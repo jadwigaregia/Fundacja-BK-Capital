@@ -1,6 +1,52 @@
-<!-- NAGŁÓWEK -->
+<!DOCTYPE html>
+<html lang="pl" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fundacja BK Capital | Aktywizacja, Integracja, Przedsiębiorczość i Prawo</title>
+    <meta name="description" content="Oficjalna strona Fundacji BK Capital w Krakowie. Aktywizacja zawodowa, integracja cudzoziemców, bezpłatne poradnictwo prawne i wsparcie przedsiębiorczości. KRS: 0000861638, NIP: 6793206112, REGON: 387222545.">
+    <meta name="theme-color" content="#0f172a">
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'bk-dark': '#0f172a',
+                        'bk-navy': '#1e293b',
+                        'bk-red': '#e31e24',
+                        'bk-red-hover': '#c8171d',
+                        'bk-light': '#f8fafc',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', '-apple-system', 'Segoe UI', 'Roboto', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <style>
+        .glass-header {
+            background: rgba(255, 255, 255, 0.96);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+    </style>
+</head>
+<body class="bg-bk-light text-slate-800 font-sans antialiased selection:bg-bk-red selection:text-white flex flex-col min-h-screen">
+
+    <!-- NAGŁÓWEK -->
     <header class="fixed top-0 left-0 right-0 z-50 glass-header border-b border-slate-200">
         <div class="max-w-6xl mx-auto px-4 sm:px-6 h-20 flex items-center justify-between gap-4">
+            
             <!-- LOGO FUNDACJI -->
             <a href="#" class="flex items-center gap-3 group focus:outline-none focus:ring-2 focus:ring-bk-red rounded-lg p-1" aria-label="Strona główna Fundacji BK Capital">
                 <div class="w-11 h-11 bg-bk-red rounded-full flex items-center justify-center shadow-sm shrink-0 group-hover:scale-105 transition-transform">
@@ -14,27 +60,28 @@
             
             <!-- DANE KONTAKTOWE OBOK SIEBIE W NAGŁÓWKU -->
             <div class="flex items-center flex-wrap gap-2 sm:gap-4 text-xs sm:text-sm font-semibold text-slate-600">
-                <a href="tel:+48664901126" class="hover:text-bk-red transition-colors focus:outline-none focus:ring-2 focus:ring-bk-red rounded px-1.5 py-1 flex items-center gap-1.5 bg-slate-50 sm:bg-transparent rounded-lg">
+                <a href="tel:+48664901126" class="hover:text-bk-red transition-colors focus:outline-none focus:ring-2 focus:ring-bk-red rounded px-2 py-1 flex items-center gap-1.5 bg-slate-50 sm:bg-transparent rounded-lg">
                     <span aria-hidden="true">📞</span> 
                     <span>+48 664 901 126</span>
                 </a>
                 <span class="text-slate-300 hidden sm:inline" aria-hidden="true">|</span>
-                <a href="mailto:fundacja@bkcapital.pl" class="hover:text-bk-red transition-colors focus:outline-none focus:ring-2 focus:ring-bk-red rounded px-1.5 py-1 flex items-center gap-1.5 bg-slate-50 sm:bg-transparent rounded-lg">
+                <a href="mailto:fundacja@bkcapital.pl" class="hover:text-bk-red transition-colors focus:outline-none focus:ring-2 focus:ring-bk-red rounded px-2 py-1 flex items-center gap-1.5 bg-slate-50 sm:bg-transparent rounded-lg">
                     <span aria-hidden="true">✉️</span> 
                     <span>fundacja@bkcapital.pl</span>
                 </a>
             </div>
+
         </div>
     </header>
 
     <!-- GŁÓWNA TREŚĆ -->
     <main class="flex-grow pt-28 pb-16 max-w-6xl mx-auto px-4 sm:px-6 w-full space-y-16">
 
-        <!-- HERO -->
+        <!-- HERO SECTION -->
         <section class="bg-white rounded-3xl p-8 sm:p-12 lg:p-16 border border-slate-200 shadow-sm relative overflow-hidden" aria-labelledby="hero-title">
             <div class="grid lg:grid-cols-12 gap-10 items-center">
                 <div class="lg:col-span-7 space-y-6 text-center sm:text-left">
-                    <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-red-50 border border-red-200 text-bk-red text-xs font-semibold tracking-wide">
+                    <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-red-50 border border-red-200 text-bk-red text-xs font-semibold tracking-wide">
                         <span class="w-2 h-2 rounded-full bg-bk-red animate-pulse" aria-hidden="true"></span>
                         KRS: 0000861638 &bull; Kraków
                     </div>
@@ -47,9 +94,8 @@
                         Fundacja BK Capital powstała w Krakowie z myślą o osobach, które potrzebują realnego wsparcia na rynku pracy oraz pomocy w adaptacji do nowego środowiska społecznego. Zapewniamy profesjonalne doradztwo, podnosimy kwalifikacje i otwieramy perspektywy stabilnego zatrudnienia.
                     </p>
                     
-                    <!-- PRZYCISKI AKCJI (CTA) -->
                     <div class="pt-2 flex flex-wrap gap-3 justify-center sm:justify-start">
-                        <a href="tel:+48664901126" class="px-6 py-3.5 bg-bk-red text-white font-bold text-sm rounded-xl shadow-md hover:bg-red-700 transition-all focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500">
+                        <a href="tel:+48664901126" class="px-6 py-3.5 bg-bk-red text-white font-bold text-sm rounded-xl shadow-md hover:bg-bk-red-hover transition-all focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500">
                             Skontaktuj się z nami
                         </a>
                         <a href="#cele" class="px-6 py-3.5 bg-slate-100 text-slate-700 font-bold text-sm rounded-xl hover:bg-slate-200 transition-all focus:outline-none focus:ring-2 focus:ring-slate-400">
@@ -63,20 +109,7 @@
                         <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=1000&q=80" 
                              alt="Zespół Fundacji BK Capital podczas warsztatów integracyjnych i doradztwa zawodowego" 
                              class="w-full h-full object-cover">
-                        <div class="absolute inset-0 bg-gradient-to-t from-bk-dark/60 via-transparent to-transparent"></div>
-                        <div class="absolute bottom-4 left-4 right-4 text-white text-xs font-medium">
-                            Integracja, edukacja i wsparcie społeczne w Krakowie
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-                <div class="lg:col-span-5">
-                    <div class="relative rounded-3xl overflow-hidden shadow-xl border-4 border-slate-100 aspect-[4/3] sm:aspect-[16/10] lg:aspect-[4/3]">
-                        <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=1000&q=80" 
-                             alt="Zespół Fundacji BK Capital podczas warsztatów integracyjnych i doradztwa zawodowego" 
-                             class="w-full h-full object-cover">
-                        <div class="absolute inset-0 bg-gradient-to-t from-bk-dark/60 via-transparent to-transparent"></div>
+                        <div class="absolute inset-0 bg-gradient-to-t from-bk-dark/70 via-transparent to-transparent"></div>
                         <div class="absolute bottom-4 left-4 right-4 text-white text-xs font-medium">
                             Integracja, edukacja i wsparcie społeczne w Krakowie
                         </div>
@@ -86,7 +119,7 @@
         </section>
 
         <!-- O NAS -->
-        <section class="bg-white rounded-3xl p-8 sm:p-12 border border-slate-200 shadow-sm">
+        <section id="o-nas" class="bg-white rounded-3xl p-8 sm:p-12 border border-slate-200 shadow-sm" aria-labelledby="about-heading">
             <div class="grid lg:grid-cols-12 gap-10 items-center">
                 <div class="lg:col-span-5 order-2 lg:order-1">
                     <div class="grid grid-cols-2 gap-4">
@@ -101,7 +134,7 @@
 
                 <div class="lg:col-span-7 space-y-4 order-1 lg:order-2">
                     <h2 class="text-xs font-bold tracking-widest text-bk-red uppercase">O fundacji</h2>
-                    <h3 class="text-2xl sm:text-3xl font-extrabold text-bk-dark tracking-tight">
+                    <h3 id="about-heading" class="text-2xl sm:text-3xl font-extrabold text-bk-dark tracking-tight">
                         Wspieramy, edukujemy i tworzymy przestrzeń równego startu
                     </h3>
                     <p class="text-slate-600 text-sm sm:text-base leading-relaxed">
@@ -115,10 +148,10 @@
         </section>
 
         <!-- CELE STATUTOWE -->
-        <section id="cele" class="bg-white rounded-3xl p-8 sm:p-12 border border-slate-200 shadow-sm">
+        <section id="cele" class="bg-white rounded-3xl p-8 sm:p-12 border border-slate-200 shadow-sm" aria-labelledby="goals-heading">
             <div class="max-w-2xl mb-8">
                 <h2 class="text-xs font-bold tracking-widest text-bk-red uppercase mb-2">Cele statutowe</h2>
-                <h3 class="text-2xl sm:text-3xl font-extrabold text-bk-dark tracking-tight">Główne filary naszej działalności</h3>
+                <h3 id="goals-heading" class="text-2xl sm:text-3xl font-extrabold text-bk-dark tracking-tight">Główne filary naszej działalności</h3>
                 <p class="text-slate-600 text-sm mt-2">Kompleksowe wsparcie realizowane zgodnie ze statutem fundacji:</p>
             </div>
             
@@ -162,15 +195,15 @@
         </section>
 
         <!-- DANE KONTAKTOWE I PEŁNA METRYKA REJESTROWA -->
-        <section class="bg-bk-dark text-white rounded-3xl p-8 sm:p-12 shadow-lg">
-            <h2 class="text-xs font-bold tracking-widest text-red-400 uppercase mb-2">Kontakt i formalności</h2>
-            <h3 class="text-2xl sm:text-3xl font-extrabold tracking-tight mb-8">Siedziba oraz metryka rejestrowa</h3>
+        <section id="kontakt" class="bg-bk-dark text-white rounded-3xl p-8 sm:p-12 shadow-lg" aria-labelledby="contact-title">
+            <h2 class="text-xs font-bold tracking-widest text-red-400 uppercase mb-2">Kontakt</h2>
+            <h3 id="contact-title" class="text-2xl sm:text-3xl font-extrabold tracking-tight mb-8">Siedziba i metryka rejestrowa</h3>
 
             <div class="grid lg:grid-cols-2 gap-10 text-sm">
                 <!-- Lewa kolumna: Adres i kontakt -->
                 <div class="space-y-6">
                     <div>
-                        <span class="text-xs uppercase tracking-wider text-slate-400 block font-medium">Oficjalna nazwa i adres</span>
+                        <span class="text-xs uppercase tracking-wider text-slate-400 block font-medium">Adres Siedziby</span>
                         <p class="text-lg text-white font-semibold mt-1">Fundacja BK Capital</p>
                         <p class="text-base text-slate-200 mt-0.5">ul. Celna 13/17, 30-607 Kraków</p>
                         <p class="text-xs text-slate-400 mt-1">Województwo małopolskie, Polska</p>
@@ -188,17 +221,12 @@
                     </div>
                 </div>
 
-                <!-- Prawa kolumna: Pełna metryka KRS, NIP, REGON -->
+                <!-- Prawa kolumna: Tabela formalna z pełnymi danymi -->
                 <div class="bg-slate-800/90 p-6 rounded-2xl border border-slate-700 space-y-3 font-mono text-xs text-slate-300">
-                    <p class="font-sans font-bold text-white text-sm pb-1 border-b border-slate-700">Dane rejestrowe podmiotu:</p>
+                    <p class="font-sans font-bold text-white text-sm pb-1 border-b border-slate-700">Dane rejestrowe i formalne:</p>
                     
                     <div class="flex justify-between border-b border-slate-700/60 pb-2">
-                        <span class="text-slate-400 font-sans">Pełna nazwa:</span>
-                        <span class="text-white font-sans font-semibold text-right">FUNDACJA BK CAPITAL</span>
-                    </div>
-                    
-                    <div class="flex justify-between border-b border-slate-700/60 pb-2">
-                        <span class="text-slate-400 font-sans">Numer KRS:</span>
+                        <span class="text-slate-400 font-sans">KRS:</span>
                         <span class="text-white font-bold tracking-wider select-all">0000861638</span>
                     </div>
 
@@ -213,17 +241,17 @@
                     </div>
 
                     <div class="flex justify-between border-b border-slate-700/60 pb-2">
-                        <span class="text-slate-400 font-sans">Data wpisu do KRS:</span>
+                        <span class="text-slate-400 font-sans">Data wpisu KRS:</span>
                         <span class="text-slate-200">02.10.2020 r.</span>
                     </div>
 
                     <div class="flex justify-between border-b border-slate-700/60 pb-2">
-                        <span class="text-slate-400 font-sans">Forma prawna:</span>
-                        <span class="text-slate-200 font-sans">Fundacja</span>
+                        <span class="text-slate-400 font-sans">Sąd rejestrowy:</span>
+                        <span class="text-slate-200 font-sans text-right">Sąd Rejonowy dla Krakowa-Śródmieścia</span>
                     </div>
 
                     <div class="flex justify-between">
-                        <span class="text-slate-400 font-sans">Status podatnika VAT:</span>
+                        <span class="text-slate-400 font-sans">Podatnik VAT:</span>
                         <span class="text-emerald-400 font-sans font-semibold">NIE (Zwolniony)</span>
                     </div>
                 </div>
