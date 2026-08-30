@@ -1,50 +1,9 @@
-<!DOCTYPE html>
-<html lang="pl" class="scroll-smooth">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fundacja BK Capital | Aktywizacja, Integracja, Przedsiębiorczość i Prawo</title>
-    <meta name="description" content="Oficjalna strona Fundacji BK Capital w Krakowie. Aktywizacja zawodowa, integracja cudzoziemców, bezpłatne poradnictwo prawne i wsparcie przedsiębiorczości. KRS: 0000861638.">
-
-    <!-- Tailwind CSS CDN -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        'bk-dark': '#0f172a',
-                        'bk-red': '#e31e24',
-                        'bk-light': '#f8fafc',
-                    },
-                    fontFamily: {
-                        sans: ['Inter', 'system-ui', '-apple-system', 'sans-serif'],
-                    },
-                }
-            }
-        }
-    </script>
-
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
-
-    <style>
-        .glass-header {
-            background: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(12px);
-            -webkit-backdrop-filter: blur(12px);
-        }
-    </style>
-</head>
-<body class="bg-bk-light text-slate-800 font-sans antialiased selection:bg-bk-red selection:text-white flex flex-col min-h-screen">
-
-    <!-- NAGŁÓWEK -->
+<!-- NAGŁÓWEK -->
     <header class="fixed top-0 left-0 right-0 z-50 glass-header border-b border-slate-200">
-        <div class="max-w-6xl mx-auto px-4 sm:px-6 h-20 flex items-center justify-between">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 h-20 flex items-center justify-between gap-4">
+            <!-- LOGO FUNDACJI -->
             <a href="#" class="flex items-center gap-3 group focus:outline-none focus:ring-2 focus:ring-bk-red rounded-lg p-1" aria-label="Strona główna Fundacji BK Capital">
-                <div class="w-11 h-11 bg-bk-red rounded-full flex items-center justify-center shadow-sm shrink-0">
+                <div class="w-11 h-11 bg-bk-red rounded-full flex items-center justify-center shadow-sm shrink-0 group-hover:scale-105 transition-transform">
                     <span class="text-white font-black text-lg tracking-tight">BK</span>
                 </div>
                 <div class="flex flex-col">
@@ -52,10 +11,18 @@
                     <span class="text-[9px] font-bold text-slate-900 tracking-[0.3em] uppercase mt-0.5">FUNDACJA</span>
                 </div>
             </a>
-            <div class="flex items-center gap-4 text-xs sm:text-sm font-semibold text-slate-600">
-                <a href="tel:+48664901126" class="hover:text-bk-red transition-colors focus:outline-none focus:ring-2 focus:ring-bk-red rounded px-1">+48 664 901 126</a>
-                <span class="text-slate-300" aria-hidden="true">|</span>
-                <a href="mailto:fundacja@bkcapital.pl" class="hover:text-bk-red transition-colors focus:outline-none focus:ring-2 focus:ring-bk-red rounded px-1">fundacja@bkcapital.pl</a>
+            
+            <!-- DANE KONTAKTOWE OBOK SIEBIE W NAGŁÓWKU -->
+            <div class="flex items-center flex-wrap gap-2 sm:gap-4 text-xs sm:text-sm font-semibold text-slate-600">
+                <a href="tel:+48664901126" class="hover:text-bk-red transition-colors focus:outline-none focus:ring-2 focus:ring-bk-red rounded px-1.5 py-1 flex items-center gap-1.5 bg-slate-50 sm:bg-transparent rounded-lg">
+                    <span aria-hidden="true">📞</span> 
+                    <span>+48 664 901 126</span>
+                </a>
+                <span class="text-slate-300 hidden sm:inline" aria-hidden="true">|</span>
+                <a href="mailto:fundacja@bkcapital.pl" class="hover:text-bk-red transition-colors focus:outline-none focus:ring-2 focus:ring-bk-red rounded px-1.5 py-1 flex items-center gap-1.5 bg-slate-50 sm:bg-transparent rounded-lg">
+                    <span aria-hidden="true">✉️</span> 
+                    <span>fundacja@bkcapital.pl</span>
+                </a>
             </div>
         </div>
     </header>
@@ -63,20 +30,32 @@
     <!-- GŁÓWNA TREŚĆ -->
     <main class="flex-grow pt-28 pb-16 max-w-6xl mx-auto px-4 sm:px-6 w-full space-y-16">
 
-        <!-- SEKCJA POWITALNA / HERO -->
-        <section class="bg-white rounded-3xl p-8 sm:p-12 lg:p-16 border border-slate-200 shadow-sm relative overflow-hidden">
+        <!-- HERO -->
+        <section class="bg-white rounded-3xl p-8 sm:p-12 lg:p-16 border border-slate-200 shadow-sm relative overflow-hidden" aria-labelledby="hero-title">
             <div class="grid lg:grid-cols-12 gap-10 items-center">
                 <div class="lg:col-span-7 space-y-6 text-center sm:text-left">
                     <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-red-50 border border-red-200 text-bk-red text-xs font-semibold tracking-wide">
                         <span class="w-2 h-2 rounded-full bg-bk-red animate-pulse" aria-hidden="true"></span>
                         KRS: 0000861638 &bull; Kraków
                     </div>
-                    <h1 class="text-3xl sm:text-5xl font-black text-bk-dark tracking-tight leading-[1.15]">
+                    
+                    <h1 id="hero-title" class="text-3xl sm:text-5xl font-black text-bk-dark tracking-tight leading-[1.15]">
                         Budujemy dialog, wspieramy integrację i rozwój zawodowy.
                     </h1>
+                    
                     <p class="text-base sm:text-lg text-slate-600 leading-relaxed">
                         Fundacja BK Capital powstała w Krakowie z myślą o osobach, które potrzebują realnego wsparcia na rynku pracy oraz pomocy w adaptacji do nowego środowiska społecznego. Zapewniamy profesjonalne doradztwo, podnosimy kwalifikacje i otwieramy perspektywy stabilnego zatrudnienia.
                     </p>
+                    
+                    <!-- PRZYCISKI AKCJI (CTA) -->
+                    <div class="pt-2 flex flex-wrap gap-3 justify-center sm:justify-start">
+                        <a href="tel:+48664901126" class="px-6 py-3.5 bg-bk-red text-white font-bold text-sm rounded-xl shadow-md hover:bg-red-700 transition-all focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500">
+                            Skontaktuj się z nami
+                        </a>
+                        <a href="#cele" class="px-6 py-3.5 bg-slate-100 text-slate-700 font-bold text-sm rounded-xl hover:bg-slate-200 transition-all focus:outline-none focus:ring-2 focus:ring-slate-400">
+                            Nasze cele statutowe
+                        </a>
+                    </div>
                 </div>
 
                 <div class="lg:col-span-5">
@@ -92,17 +71,30 @@
                 </div>
             </div>
         </section>
+                <div class="lg:col-span-5">
+                    <div class="relative rounded-3xl overflow-hidden shadow-xl border-4 border-slate-100 aspect-[4/3] sm:aspect-[16/10] lg:aspect-[4/3]">
+                        <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=1000&q=80" 
+                             alt="Zespół Fundacji BK Capital podczas warsztatów integracyjnych i doradztwa zawodowego" 
+                             class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-gradient-to-t from-bk-dark/60 via-transparent to-transparent"></div>
+                        <div class="absolute bottom-4 left-4 right-4 text-white text-xs font-medium">
+                            Integracja, edukacja i wsparcie społeczne w Krakowie
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-        <!-- O NAS / MISJA -->
+        <!-- O NAS -->
         <section class="bg-white rounded-3xl p-8 sm:p-12 border border-slate-200 shadow-sm">
             <div class="grid lg:grid-cols-12 gap-10 items-center">
                 <div class="lg:col-span-5 order-2 lg:order-1">
                     <div class="grid grid-cols-2 gap-4">
                         <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=600&q=80" 
-                             alt="Konsultacje prawne i obywatelskie w siedzibie fundacji" 
+                             alt="Konsultacje prawne i doradztwo obywatelskie" 
                              class="rounded-2xl object-cover h-52 w-full shadow-md">
                         <img src="https://images.unsplash.com/photo-1531545514256-b1400bc00f31?auto=format&fit=crop&w=600&q=80" 
-                             alt="Szkolenia oraz warsztaty integracyjne i adaptacyjne" 
+                             alt="Szkolenia oraz warsztaty integracyjne" 
                              class="rounded-2xl object-cover h-52 w-full shadow-md mt-6">
                     </div>
                 </div>
@@ -113,7 +105,7 @@
                         Wspieramy, edukujemy i tworzymy przestrzeń równego startu
                     </h3>
                     <p class="text-slate-600 text-sm sm:text-base leading-relaxed">
-                        Od momentu rejestracji w październiku 2020 roku Fundacja BK Capital konsekwentnie realizuje działania statutowe w Krakowie oraz na terenie całej Małopolski. Naszą misją jest eliminowanie barier społecznych i zawodowych poprzez bezpłatne poradnictwo, budowanie dialogu międzykulturowego oraz wzmacnianie inicjatyw gospodarczych.
+                        Od momentu rejestracji w Krajowym Rejestrze Sądowym w październiku 2020 roku, Fundacja BK Capital konsekwentnie realizuje działania statutowe w Krakowie oraz na terenie całej Małopolski. Naszą misją jest eliminowanie barier społecznych i zawodowych poprzez bezpłatne poradnictwo, budowanie dialogu międzykulturowego oraz wzmacnianie inicjatyw gospodarczych.
                     </p>
                     <p class="text-slate-600 text-sm sm:text-base leading-relaxed">
                         Działamy w sposób przejrzysty i rzetelny. Pomagamy osobom wchodzącym na rynek pracy, cudzoziemcom adaptującym się w nowym otoczeniu oraz przedsiębiorcom poszukującym profesjonalnego wsparcia organizacyjnego i prawnego.
@@ -122,7 +114,7 @@
             </div>
         </section>
 
-        <!-- CELE STATUTOWE (5 FILARÓW) -->
+        <!-- CELE STATUTOWE -->
         <section id="cele" class="bg-white rounded-3xl p-8 sm:p-12 border border-slate-200 shadow-sm">
             <div class="max-w-2xl mb-8">
                 <h2 class="text-xs font-bold tracking-widest text-bk-red uppercase mb-2">Cele statutowe</h2>
@@ -169,15 +161,16 @@
             </ul>
         </section>
 
-        <!-- DANE KONTAKTOWE I REJESTROWE -->
+        <!-- DANE KONTAKTOWE I PEŁNA METRYKA REJESTROWA -->
         <section class="bg-bk-dark text-white rounded-3xl p-8 sm:p-12 shadow-lg">
-            <h2 class="text-xs font-bold tracking-widest text-red-400 uppercase mb-2">Kontakt</h2>
-            <h3 class="text-2xl sm:text-3xl font-extrabold tracking-tight mb-8">Siedziba i metryka rejestrowa</h3>
+            <h2 class="text-xs font-bold tracking-widest text-red-400 uppercase mb-2">Kontakt i formalności</h2>
+            <h3 class="text-2xl sm:text-3xl font-extrabold tracking-tight mb-8">Siedziba oraz metryka rejestrowa</h3>
 
             <div class="grid lg:grid-cols-2 gap-10 text-sm">
+                <!-- Lewa kolumna: Adres i kontakt -->
                 <div class="space-y-6">
                     <div>
-                        <span class="text-xs uppercase tracking-wider text-slate-400 block font-medium">Adres Siedziby</span>
+                        <span class="text-xs uppercase tracking-wider text-slate-400 block font-medium">Oficjalna nazwa i adres</span>
                         <p class="text-lg text-white font-semibold mt-1">Fundacja BK Capital</p>
                         <p class="text-base text-slate-200 mt-0.5">ul. Celna 13/17, 30-607 Kraków</p>
                         <p class="text-xs text-slate-400 mt-1">Województwo małopolskie, Polska</p>
@@ -195,23 +188,43 @@
                     </div>
                 </div>
 
+                <!-- Prawa kolumna: Pełna metryka KRS, NIP, REGON -->
                 <div class="bg-slate-800/90 p-6 rounded-2xl border border-slate-700 space-y-3 font-mono text-xs text-slate-300">
-                    <p class="font-sans font-bold text-white text-sm pb-1 border-b border-slate-700">Dane rejestrowe i formalne:</p>
+                    <p class="font-sans font-bold text-white text-sm pb-1 border-b border-slate-700">Dane rejestrowe podmiotu:</p>
+                    
                     <div class="flex justify-between border-b border-slate-700/60 pb-2">
-                        <span class="text-slate-400 font-sans">KRS:</span>
-                        <span class="text-white font-bold select-all">0000861638</span>
+                        <span class="text-slate-400 font-sans">Pełna nazwa:</span>
+                        <span class="text-white font-sans font-semibold text-right">FUNDACJA BK CAPITAL</span>
                     </div>
+                    
                     <div class="flex justify-between border-b border-slate-700/60 pb-2">
-                        <span class="text-slate-400 font-sans">Data wpisu:</span>
-                        <span>02.10.2020 r.</span>
+                        <span class="text-slate-400 font-sans">Numer KRS:</span>
+                        <span class="text-white font-bold tracking-wider select-all">0000861638</span>
                     </div>
+
                     <div class="flex justify-between border-b border-slate-700/60 pb-2">
-                        <span class="text-slate-400 font-sans">Podatnik VAT:</span>
-                        <span class="text-emerald-400 font-sans font-semibold">NIE (Zwolniony)</span>
+                        <span class="text-slate-400 font-sans">NIP:</span>
+                        <span class="text-white font-bold tracking-wider select-all">6793206112</span>
                     </div>
+
+                    <div class="flex justify-between border-b border-slate-700/60 pb-2">
+                        <span class="text-slate-400 font-sans">REGON:</span>
+                        <span class="text-white font-bold tracking-wider select-all">387222545</span>
+                    </div>
+
+                    <div class="flex justify-between border-b border-slate-700/60 pb-2">
+                        <span class="text-slate-400 font-sans">Data wpisu do KRS:</span>
+                        <span class="text-slate-200">02.10.2020 r.</span>
+                    </div>
+
+                    <div class="flex justify-between border-b border-slate-700/60 pb-2">
+                        <span class="text-slate-400 font-sans">Forma prawna:</span>
+                        <span class="text-slate-200 font-sans">Fundacja</span>
+                    </div>
+
                     <div class="flex justify-between">
-                        <span class="text-slate-400 font-sans">NIP / REGON:</span>
-                        <span class="font-sans italic text-slate-400">Dostępne na życzenie</span>
+                        <span class="text-slate-400 font-sans">Status podatnika VAT:</span>
+                        <span class="text-emerald-400 font-sans font-semibold">NIE (Zwolniony)</span>
                     </div>
                 </div>
             </div>
@@ -223,7 +236,7 @@
     <footer class="bg-white border-t border-slate-200 py-8 text-center text-xs text-slate-500">
         <div class="max-w-6xl mx-auto px-4 space-y-1">
             <p class="font-semibold text-slate-800">Fundacja BK Capital &bull; ul. Celna 13/17, 30-607 Kraków</p>
-            <p>KRS: 0000861638 &bull; Data rejestracji: 02.10.2020 r.</p>
+            <p>KRS: 0000861638 &bull; NIP: 6793206112 &bull; REGON: 387222545 &bull; Rejestracja: 02.10.2020 r.</p>
             <p class="pt-1 text-slate-400">&copy; 2026 Fundacja BK Capital. Działalność statutowa i pożytek publiczny.</p>
         </div>
     </footer>
