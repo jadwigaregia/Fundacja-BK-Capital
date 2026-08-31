@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fundacja BK Capital | Aktywizacja, Integracja, Przedsiębiorczość i Prawo</title>
-    <meta name="description" content="Oficjalna strona Fundacji BK Capital w Krakowie. Aktywizacja zawodowa, integracja cudzoziemców, bezpłatne poradnictwo prawne i wsparcie przedsiębiorczości. KRS: 0000861638.">
+    <meta name="description" content="Oficjalna strona Fundacji BK Capital w Krakowie. Aktywizacja zawodowa, integracja cudzoziemców, bezpłatne poradnictwo prawne i wsparcie przedsiębiorczości. KRS: 0000861638, NIP: 6793206112, REGON: 387222545.">
     <meta name="theme-color" content="#0f172a">
 
     <!-- Tailwind CSS CDN -->
@@ -147,7 +147,7 @@
             </div>
         </section>
 
-        <!-- CELE STATUTOWE I POBIERANIE STATUTU -->
+        <!-- CELE STATUTOWE I MODAL STATUTU -->
         <section id="cele" class="bg-white rounded-3xl p-8 sm:p-12 border border-slate-200 shadow-sm" aria-labelledby="goals-heading">
             <div class="max-w-3xl mb-10">
                 <h2 class="text-xs font-bold tracking-widest text-bk-red uppercase mb-2">Transparentność i Działanie</h2>
@@ -213,26 +213,26 @@
                     </div>
                 </div>
 
-                <!-- Karta CTA: Pełny Statut PDF -->
+                <!-- Karta CTA: Przycisk otwierający pełny Statut -->
                 <div class="bg-bk-dark text-white p-6 rounded-2xl border border-slate-800 flex flex-col justify-between">
                     <div>
                         <span class="inline-block px-2.5 py-1 bg-slate-800 text-red-300 text-xs font-semibold rounded mb-3">Dokumentacja formalna</span>
                         <h4 class="text-base font-bold text-white mb-2">Pełny Statut Fundacji</h4>
                         <p class="text-slate-300 text-xs mb-6 leading-relaxed">
-                            Sprawdź szczegółowy zakres prawny naszej działalności zarejestrowanej pod numerem KRS: 0000861638.
+                            Sprawdź pełny tekst aktu prawnego i cele działalności zarejestrowanej pod numerem KRS: 0000861638.
                         </p>
                     </div>
-                    <a href="./statut-fundacja-bk-capital.pdf" download class="inline-flex items-center justify-center px-4 py-3 bg-bk-red text-white font-bold text-xs rounded-xl hover:bg-bk-red-hover transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500 shadow-md">
+                    <button onclick="openModal('statut-modal')" class="inline-flex items-center justify-center px-4 py-3 bg-bk-red text-white font-bold text-xs rounded-xl hover:bg-bk-red-hover transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500 shadow-md">
                         <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/>
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
                         </svg>
-                        Pobierz Statut (PDF)
-                    </a>
+                        Zobacz pełny Statut
+                    </button>
                 </div>
             </div>
         </section>
 
-        <!-- DANE KONTAKTOWE I PEŁNA METRYKA REJESTROWA -->
+        <!-- DANE KONTAKTOWE I METRYKA REJESTROWA -->
         <section id="kontakt" class="bg-bk-dark text-white rounded-3xl p-8 sm:p-12 shadow-lg" aria-labelledby="contact-title">
             <h2 class="text-xs font-bold tracking-widest text-red-400 uppercase mb-2">Kontakt</h2>
             <h3 id="contact-title" class="text-2xl sm:text-3xl font-extrabold tracking-tight mb-8">Siedziba i metryka rejestrowa</h3>
@@ -259,7 +259,7 @@
                     </div>
                 </div>
 
-                <!-- Prawa kolumna: Tabela formalna z pełnymi danymi -->
+                <!-- Prawa kolumna: Tabela formalna -->
                 <div class="bg-slate-800/90 p-6 rounded-2xl border border-slate-700 space-y-3 font-mono text-xs text-slate-300">
                     <p class="font-sans font-bold text-white text-sm pb-1 border-b border-slate-700">Dane rejestrowe i formalne:</p>
                     
@@ -306,7 +306,7 @@
             <div class="pt-1 flex flex-wrap justify-center items-center gap-3 text-slate-500">
                 <span>&copy; 2026 Fundacja BK Capital.</span>
                 <span>&bull;</span>
-                <a href="./statut-fundacja-bk-capital.pdf" download class="underline hover:text-bk-red focus:outline-none focus:ring-1 focus:ring-bk-red rounded">Pobierz Statut (PDF)</a>
+                <button onclick="openModal('statut-modal')" class="underline hover:text-bk-red focus:outline-none focus:ring-1 focus:ring-bk-red rounded">Statut Fundacji</button>
                 <span>&bull;</span>
                 <button onclick="openModal('rodo-modal')" class="underline hover:text-bk-red focus:outline-none focus:ring-1 focus:ring-bk-red rounded">Klauzula informacyjna RODO</button>
                 <span>&bull;</span>
@@ -314,6 +314,47 @@
             </div>
         </div>
     </footer>
+
+    <!-- MODAL: PEŁNY STATUT FUNDACJI -->
+    <div id="statut-modal" class="fixed inset-0 z-50 bg-slate-900/60 backdrop-blur-sm hidden items-center justify-center p-4">
+        <div class="bg-white rounded-3xl max-w-3xl w-full max-h-[88vh] flex flex-col shadow-2xl border border-slate-100 overflow-hidden">
+            <div class="p-6 border-b border-slate-100 flex items-center justify-between bg-slate-50">
+                <div>
+                    <h3 class="text-lg font-bold text-slate-900">Statut Fundacji BK Capital</h3>
+                    <p class="text-xs text-slate-500">KRS: 0000861638 &bull; Siedziba: Kraków</p>
+                </div>
+                <button onclick="closeModal('statut-modal')" class="text-slate-400 hover:text-slate-700 p-2 rounded-lg text-2xl leading-none" aria-label="Zamknij okno">&times;</button>
+            </div>
+            <div class="p-6 overflow-y-auto text-xs sm:text-sm text-slate-700 space-y-6 leading-relaxed">
+                <div>
+                    <h4 class="font-bold text-slate-900 uppercase text-xs tracking-wider mb-2">Rozdział I: Postanowienia Ogólne</h4>
+                    <p>Fundacja pod nazwą <strong>Fundacja BK Capital</strong> działa na podstawie przepisów ustawy z dnia 6 kwietnia 1984 r. o fundacjach oraz niniejszego Statutu. Siedzibą Fundacji jest miasto Kraków. Czas trwania Fundacji jest nieoznaczony.</p>
+                </div>
+                <div>
+                    <h4 class="font-bold text-slate-900 uppercase text-xs tracking-wider mb-2">Rozdział II: Cele i Zasady Działania Fundacji</h4>
+                    <p class="mb-3">Głównymi celami Fundacji są:</p>
+                    <ol class="list-decimal pl-5 space-y-2">
+                        <li><strong>Aktywizacja zawodowa i rynek pracy:</strong> promocja zatrudnienia oraz wsparcie osób bezrobotnych lub zagrożonych zwolnieniem poprzez poradnictwo, warsztaty i szkolenia podnoszące kwalifikacje.</li>
+                        <li><strong>Integracja cudzoziemców:</strong> działalność na rzecz integracji i reintegracji społeczno-zawodowej obcokrajowców, uchodźców oraz grup zagrożonych wykluczeniem społecznym.</li>
+                        <li><strong>Rozwój przedsiębiorczości i innowacji:</strong> wspieranie rozwoju gospodarczego, przedsiębiorczości, edukacji technicznej oraz doradztwo organizacyjne.</li>
+                        <li><strong>Edukacja, nauka i poradnictwo prawne:</strong> świadczenie nieodpłatnej pomocy prawnej i obywatelskiej, podnoszenie świadomości prawnej w społeczeństwie oraz rozwój oświaty.</li>
+                        <li><strong>Działalność charytatywna i integracja europejska:</strong> organizowanie pomocy humanitarnej i charytatywnej oraz rozwijanie kontaktów międzynarodowych i współpracy w ramach Unii Europejskiej.</li>
+                    </ol>
+                </div>
+                <div>
+                    <h4 class="font-bold text-slate-900 uppercase text-xs tracking-wider mb-2">Rozdział III: Majątek i Dochody Fundacji</h4>
+                    <p>Majątek Fundacji stanowi Fundusz Założycielski oraz inne mienie i środki finansowe nabyte przez Fundację w toku jej działania z dotacji, darowizn, spadków, zapisów oraz zbiórek publicznych.</p>
+                </div>
+            </div>
+            <div class="p-4 border-t border-slate-100 flex justify-between items-center bg-slate-50">
+                <button onclick="window.print()" class="inline-flex items-center text-xs font-semibold text-slate-600 hover:text-bk-red transition-colors">
+                    <svg class="w-4 h-4 mr-1.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 17h2a2 2 0 002-2v-4a2 2 0 00-2-2H5a2 2 0 00-2 2v4a2 2 0 002 2h2m2 4h6a2 2 0 002-2v-4H7v4a2 2 0 002 2zm8-12V5a2 2 0 00-2-2H9a2 2 0 00-2 2v4h10z"/></svg>
+                    Drukuj / Zapisz jako PDF
+                </button>
+                <button onclick="closeModal('statut-modal')" class="px-5 py-2.5 bg-slate-800 text-white rounded-xl text-xs font-bold hover:bg-slate-700 transition-colors">Zamknij</button>
+            </div>
+        </div>
+    </div>
 
     <!-- BANER COOKIES -->
     <div id="cookie-banner" class="fixed bottom-4 left-4 right-4 sm:left-auto sm:right-6 sm:max-w-md bg-slate-900 text-white p-5 rounded-2xl shadow-2xl border border-slate-800 z-50 flex flex-col gap-3 text-xs">
