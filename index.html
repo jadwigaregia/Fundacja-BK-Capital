@@ -76,7 +76,7 @@
 <body class="min-h-screen flex flex-col antialiased selection:bg-bk-gold selection:text-white">
 
     <!-- PASEK REJESTROWY TOP -->
-    <div class="bg-bk-slate text-slate-200 text-[11px] py-2.5 px-6 border-b border-slate-800">
+    <div class="bg-bk-slate text-slate-200 text-[11px] py-2 px-6 border-b border-slate-800">
         <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-2">
             <div class="flex flex-wrap items-center justify-center md:justify-start gap-4">
                 <span class="flex items-center gap-1.5 font-bold text-amber-400 uppercase tracking-widest text-[10px]">
@@ -86,13 +86,11 @@
                 <span class="hidden lg:inline text-slate-600">|</span>
                 <span class="hidden lg:inline text-slate-300">Siedziba: <strong class="text-white">ul. Celna 13/17, Kraków</strong></span>
             </div>
-            <div class="flex items-center gap-6 font-semibold">
-                <a href="tel:+48664901126" class="hover:text-amber-400 transition-colors flex items-center gap-1.5">
-                    📞 +48 664 901 126
-                </a>
-                <a href="mailto:kontakt@fundacjabkcapital.pl" class="hover:text-amber-400 transition-colors hidden sm:flex items-center gap-1.5">
-                    ✉️ kontakt@fundacjabkcapital.pl
-                </a>
+            <!-- ZAMIENIONE LINKI NA PRZYCISK SZYBKIEGO KONTAKTU W PASEKU TOP -->
+            <div>
+                <button onclick="openModal('top-contact-modal')" class="px-3 py-1 rounded-lg gold-gradient-bg text-white font-extrabold text-[10px] uppercase tracking-wider hover:brightness-110 transition-all shadow-sm flex items-center gap-1.5">
+                    📞 ✉️ Szybki Kontakt
+                </button>
             </div>
         </div>
     </div>
@@ -124,9 +122,9 @@
                 <a href="#faq" class="hover:text-bk-gold transition-colors">FAQ</a>
             </nav>
 
-            <a href="#kontakt" class="px-5 py-2.5 rounded-xl gold-gradient-bg text-white font-extrabold text-xs uppercase tracking-wider hover:brightness-110 transition-all shadow-md shadow-amber-500/20">
+            <button onclick="openModal('top-contact-modal')" class="px-5 py-2.5 rounded-xl gold-gradient-bg text-white font-extrabold text-xs uppercase tracking-wider hover:brightness-110 transition-all shadow-md shadow-amber-500/20">
                 Szybki Kontakt
-            </a>
+            </button>
         </div>
     </header>
 
@@ -156,9 +154,9 @@
                             <a href="#sektory" class="px-8 py-4 rounded-xl gold-gradient-bg text-white font-extrabold text-xs uppercase tracking-widest shadow-lg shadow-amber-500/20 hover:brightness-110 transition-all">
                                 Poznaj Sektory Działalności
                             </a>
-                            <a href="#kontakt" class="px-8 py-4 rounded-xl bg-slate-100 hover:bg-slate-200 text-bk-slate font-bold text-xs uppercase tracking-widest border border-slate-300 transition-all">
+                            <button onclick="openModal('top-contact-modal')" class="px-8 py-4 rounded-xl bg-slate-100 hover:bg-slate-200 text-bk-slate font-bold text-xs uppercase tracking-widest border border-slate-300 transition-all">
                                 Skontaktuj się z Nami
-                            </a>
+                            </button>
                         </div>
 
                         <!-- LICZNIKI REJESTROWE -->
@@ -539,6 +537,35 @@
             </div>
         </div>
     </footer>
+
+    <!-- MODAL WYBORU SZYBKIEGO KONTAKTU (ZADZWROŃ LUB NAPISZ) -->
+    <div id="top-contact-modal" class="fixed inset-0 z-50 bg-slate-900/60 backdrop-blur-md hidden items-center justify-center p-4">
+        <div class="bg-white rounded-3xl max-w-sm w-full p-6 space-y-5 shadow-2xl border border-slate-200 text-center relative">
+            <button onclick="closeModal('top-contact-modal')" class="absolute top-4 right-4 text-slate-400 hover:text-slate-700 text-2xl leading-none">&times;</button>
+            
+            <div class="w-12 h-12 gold-gradient-bg text-white rounded-2xl flex items-center justify-center font-bold text-xl mx-auto shadow-md">
+                💬
+            </div>
+            
+            <div>
+                <h3 class="font-serif font-bold text-bk-slate text-lg">Szybki Kontakt</h3>
+                <p class="text-slate-500 text-xs mt-1">Wybierz dogodną dla Ciebie formę kontaktu z sekretariatem Fundacji:</p>
+            </div>
+
+            <div class="space-y-3 pt-2">
+                <a href="tel:+48664901126" class="w-full py-3.5 px-4 bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-xs uppercase tracking-wider rounded-xl transition-all shadow-md flex items-center justify-center gap-2">
+                    <span>📞 Zadzwoń: +48 664 901 126</span>
+                </a>
+                <a href="mailto:kontakt@fundacjabkcapital.pl" class="w-full py-3.5 px-4 bg-bk-slate hover:bg-slate-800 text-white font-bold text-xs uppercase tracking-wider rounded-xl transition-all shadow-md flex items-center justify-center gap-2">
+                    <span>✉️ Wyślij E-mail</span>
+                </a>
+            </div>
+
+            <button onclick="closeModal('top-contact-modal')" class="text-xs text-slate-400 hover:text-slate-600 underline font-medium">
+                Anuluj
+            </button>
+        </div>
+    </div>
 
     <!-- MODAL STATUT -->
     <div id="statut-modal" class="fixed inset-0 z-50 bg-slate-900/60 backdrop-blur-md hidden items-center justify-center p-4">
