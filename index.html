@@ -3,9 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fundacja BK Capital | Instytut Aktywizacji, Integracji i Rozwoju Społecznego</title>
-    <meta name="description" content="Oficjalny portal Fundacji BK Capital w Krakowie. Inicjatywa wspierająca rozwój zawodowy, integrację cudzoziemców oraz przedsiębiorczość. KRS: 0000861638.">
+    <title>Fundacja BK Capital | Aktywizacja Zawodowa, Integracja i Edukacja w Krakowie</title>
+    <meta name="description" content="Oficjalny portal Fundacji BK Capital w Krakowie. Inicjatywy wspierające rozwój zawodowy, bezpłatny kurs hiszpańskiego, doradztwo rynkowe i integrację cudzoziemców. KRS: 0000861638.">
+    <meta name="robots" content="index, follow">
 
+    <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
@@ -31,6 +33,7 @@
         }
     </script>
 
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;0,900;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
@@ -71,8 +74,9 @@
         }
     </style>
 </head>
-<body class="min-h-screen flex flex-col antialiased selection:bg-bk-gold selection:text-white">
+<body class="min-h-screen flex flex-col antialiased selection:bg-bk-gold selection:text-white relative">
 
+    <!-- PASEK REJESTROWY TOP -->
     <div class="bg-bk-slate text-slate-200 text-[11px] py-2.5 px-6 border-b border-slate-800">
         <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-2">
             <div class="flex flex-wrap items-center justify-center md:justify-start gap-4">
@@ -86,9 +90,11 @@
         </div>
     </div>
 
+    <!-- NAVBAR -->
     <header class="sticky top-0 z-50 glass-nav-light border-b border-slate-200">
         <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
             
+            <!-- BRAND LOGO -->
             <a href="#" class="flex items-center gap-3.5 group" aria-label="Strona główna Fundacji BK Capital">
                 <div class="w-11 h-11 rounded-xl bg-gradient-to-br from-amber-500 to-amber-700 p-0.5 shadow-md shadow-amber-500/20 group-hover:scale-105 transition-transform">
                     <div class="w-full h-full bg-bk-slate rounded-[10px] flex items-center justify-center font-serif font-black text-xl text-amber-400">
@@ -101,11 +107,13 @@
                 </div>
             </a>
 
-            <nav class="hidden lg:flex items-center gap-8 text-xs font-bold uppercase tracking-wider text-slate-700">
+            <!-- MENU DESKTOP -->
+            <nav class="hidden lg:flex items-center gap-6 text-xs font-bold uppercase tracking-wider text-slate-700">
                 <a href="#o-nas" class="hover:text-bk-gold transition-colors">O Instytucji</a>
                 <a href="#misja" class="hover:text-bk-gold transition-colors">Wartości</a>
                 <a href="#sektory" class="hover:text-bk-gold transition-colors">Sektory Działalności</a>
                 <a href="#projekty" class="hover:text-bk-gold transition-colors">Program Językowy</a>
+                <a href="#baza-wiedzy" class="hover:text-bk-gold transition-colors">Aktualności & SEO</a>
                 <a href="#kontakt" class="hover:text-bk-gold transition-colors">Kontakt</a>
                 <a href="#faq" class="hover:text-bk-gold transition-colors">FAQ</a>
             </nav>
@@ -118,6 +126,7 @@
 
     <main class="flex-grow space-y-24 pb-24">
 
+        <!-- HERO SECTION -->
         <section class="relative pt-16 pb-20 px-6 overflow-hidden hero-pattern-light bg-white border-b border-slate-200">
             <div class="max-w-7xl mx-auto relative z-10">
                 <div class="grid lg:grid-cols-12 gap-12 items-center">
@@ -146,6 +155,7 @@
                             </button>
                         </div>
 
+                        <!-- LICZNIKI REJESTROWE -->
                         <div class="pt-8 grid grid-cols-3 gap-6 border-t border-slate-200 max-w-lg mx-auto lg:mx-0">
                             <div>
                                 <span class="font-serif text-3xl font-bold gold-gradient-text">2020</span>
@@ -162,6 +172,7 @@
                         </div>
                     </div>
 
+                    <!-- KARTA KRAKÓW -->
                     <div class="lg:col-span-5">
                         <div class="relative">
                             <div class="relative luxury-card-light p-3 rounded-3xl overflow-hidden shadow-2xl">
@@ -180,6 +191,7 @@
             </div>
         </section>
 
+        <!-- O INSTYTUCJI -->
         <section id="o-nas" class="max-w-7xl mx-auto px-6">
             <div class="luxury-card-light p-8 sm:p-16 rounded-3xl relative overflow-hidden">
                 <div class="grid lg:grid-cols-12 gap-12 items-center">
@@ -227,6 +239,46 @@
             </div>
         </section>
 
+        <!-- WŁADZE I TRANSPARENTNOŚĆ (WYMÓG TECHSOUP & GOOGLE AD GRANTS) -->
+        <section id="wladze" class="max-w-7xl mx-auto px-6 space-y-8">
+            <div class="text-center max-w-3xl mx-auto space-y-3">
+                <span class="text-xs font-extrabold uppercase tracking-[0.3em] text-bk-gold">Niezależność i Przejrzystość</span>
+                <h2 class="font-serif text-3xl sm:text-4xl font-bold text-bk-slate">Władze i Zarząd Fundacji</h2>
+                <p class="text-slate-600 text-xs sm:text-sm">
+                    Działamy w oparciu o jawne struktury organizacyjne zgodne z przepisami ustawy z dnia 6 kwietnia 1984 r. o fundacjach:
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-8 items-center">
+                <div class="luxury-card-light p-8 rounded-3xl space-y-4">
+                    <div class="flex items-center gap-4">
+                        <div class="w-14 h-12 rounded-2xl gold-gradient-bg text-white font-bold flex items-center justify-center text-lg shadow-md">
+                            BK
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-bk-slate text-lg">Bartosz Kaczmarczyk</h3>
+                            <p class="text-bk-gold text-xs font-semibold uppercase tracking-wider">Prezes Zarządu Fundacji BK Capital</p>
+                        </div>
+                    </div>
+                    <p class="text-slate-600 text-xs leading-relaxed">
+                        Kieruje pracami Zarządu, reprezentuje organizację na zewnątrz oraz nadzoruje realizację celów statutowych, dbając o najwyższe standardy etyczne i formalno-prawne.
+                    </p>
+                </div>
+
+                <div class="luxury-card-light p-8 rounded-3xl bg-slate-900 text-white space-y-4">
+                    <span class="text-xs font-extrabold uppercase tracking-widest text-amber-400">Przejrzystość Finansowa</span>
+                    <h3 class="font-serif text-xl font-bold text-white">Sprawozdawczość i Rejestry</h3>
+                    <p class="text-slate-300 text-xs leading-relaxed">
+                        Fundacja BK Capital realizuje obowiązki sprawozdawcze i publikuje jawne informacje o prowadzonej działalności społecznej i gospodarczej w Krajowym Rejestrze Sądowym.
+                    </p>
+                    <button onclick="openModal('statut-modal')" class="px-5 py-2.5 bg-slate-800 hover:bg-slate-700 text-amber-400 font-bold text-xs rounded-xl border border-amber-500/30 transition-all">
+                        Pobierz / Zobacz Dokumentację Statutową
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- WARTOŚCI I ZASADY -->
         <section id="misja" class="max-w-7xl mx-auto px-6 space-y-12">
             <div class="text-center max-w-3xl mx-auto space-y-4">
                 <span class="text-xs font-extrabold uppercase tracking-[0.3em] text-bk-gold">Fundament Działania</span>
@@ -271,6 +323,7 @@
             </div>
         </section>
 
+        <!-- SEKTORY DZIAŁALNOŚCI STATUTOWEJ -->
         <section id="sektory" class="max-w-7xl mx-auto px-6 space-y-12">
             <div class="text-center max-w-3xl mx-auto space-y-4">
                 <span class="text-xs font-extrabold uppercase tracking-[0.3em] text-bk-gold">Główne Obszary</span>
@@ -280,6 +333,7 @@
 
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                 
+                <!-- Sektor 1 -->
                 <div class="luxury-card-light p-8 rounded-3xl flex flex-col justify-between space-y-6">
                     <div class="space-y-4">
                         <span class="w-12 h-12 rounded-xl bg-amber-50 border border-amber-200 text-bk-gold font-serif font-bold flex items-center justify-center text-lg">01</span>
@@ -290,6 +344,7 @@
                     </div>
                 </div>
 
+                <!-- Sektor 2 -->
                 <div class="luxury-card-light p-8 rounded-3xl flex flex-col justify-between space-y-6">
                     <div class="space-y-4">
                         <span class="w-12 h-12 rounded-xl bg-amber-50 border border-amber-200 text-bk-gold font-serif font-bold flex items-center justify-center text-lg">02</span>
@@ -300,6 +355,7 @@
                     </div>
                 </div>
 
+                <!-- Sektor 3 -->
                 <div class="luxury-card-light p-8 rounded-3xl flex flex-col justify-between space-y-6">
                     <div class="space-y-4">
                         <span class="w-12 h-12 rounded-xl bg-amber-50 border border-amber-200 text-bk-gold font-serif font-bold flex items-center justify-center text-lg">03</span>
@@ -310,6 +366,7 @@
                     </div>
                 </div>
 
+                <!-- Sektor 4 (KURS HISZPAŃSKIEGO) -->
                 <div id="projekty" class="luxury-card-light p-8 rounded-3xl border-2 border-bk-gold bg-amber-50/30 flex flex-col justify-between space-y-6 relative overflow-hidden">
                     <div class="space-y-4 relative z-10">
                         <div class="flex justify-between items-center">
@@ -331,6 +388,7 @@
                     </div>
                 </div>
 
+                <!-- Sektor 5 -->
                 <div class="luxury-card-light p-8 rounded-3xl flex flex-col justify-between space-y-6">
                     <div class="space-y-4">
                         <span class="w-12 h-12 rounded-xl bg-amber-50 border border-amber-200 text-bk-gold font-serif font-bold flex items-center justify-center text-lg">05</span>
@@ -341,6 +399,7 @@
                     </div>
                 </div>
 
+                <!-- KARTA DOKUMENTU STATUTU -->
                 <div class="luxury-card-light p-8 rounded-3xl bg-slate-900 text-white flex flex-col justify-between space-y-6">
                     <div class="space-y-3">
                         <span class="text-xs font-extrabold uppercase tracking-widest text-amber-400">Dokumentacja Zapewniająca Jawność</span>
@@ -355,10 +414,57 @@
             </div>
         </section>
 
+        <!-- SEKCJA BAZY WIEDZY & SEO ARTICLES (KLUCZOWA POD GOOGLE AD GRANTS I POZYCJONOWANIE) -->
+        <section id="baza-wiedzy" class="max-w-7xl mx-auto px-6 space-y-8">
+            <div class="flex flex-col md:flex-row justify-between items-start md:items-end gap-4">
+                <div>
+                    <span class="text-xs font-extrabold uppercase tracking-[0.3em] text-bk-gold block mb-1">Centrum Informacyjne</span>
+                    <h2 class="font-serif text-3xl sm:text-4xl font-bold text-bk-slate">Aktualności & Baza Wiedzy</h2>
+                </div>
+                <p class="text-slate-500 text-xs sm:text-sm max-w-md">
+                    Artykuły merytoryczne i przewodniki przygotowane przez ekspertów Fundacji BK Capital dla mieszkańców Krakowa i Małopolski.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-6">
+                <!-- Artykuł 1 -->
+                <article class="luxury-card-light p-6 rounded-3xl space-y-3">
+                    <span class="text-[10px] font-bold uppercase tracking-wider text-amber-600 bg-amber-50 px-2.5 py-1 rounded-md inline-block">Rynek Pracy Kraków</span>
+                    <h3 class="font-bold text-bk-slate text-base leading-snug">Jak efektywnie powrócić na rynek pracy w Małopolsce?</h3>
+                    <p class="text-slate-600 text-xs leading-relaxed">
+                        Praktyczny przewodnik po metodach podnoszenia kwalifikacji zawodowych oraz bezpłatnych programach aktywizacyjnych.
+                    </p>
+                    <a href="#kontakt" class="inline-block text-xs font-bold text-bk-gold hover:underline pt-2">Czytaj więcej &rarr;</a>
+                </article>
+
+                <!-- Artykuł 2 -->
+                <article class="luxury-card-light p-6 rounded-3xl space-y-3">
+                    <span class="text-[10px] font-bold uppercase tracking-wider text-amber-600 bg-amber-50 px-2.5 py-1 rounded-md inline-block">Integracja Cudzoziemców</span>
+                    <h3 class="font-bold text-bk-slate text-base leading-snug">Adaptacja społeczno-zawodowa obcokrajowców w Polsce</h3>
+                    <p class="text-slate-600 text-xs leading-relaxed">
+                        Kluczowe kroki prawne i społeczne wspierające szybką integrację i stabilne zatrudnienie cudzoziemców.
+                    </p>
+                    <a href="#kontakt" class="inline-block text-xs font-bold text-bk-gold hover:underline pt-2">Czytaj więcej &rarr;</a>
+                </article>
+
+                <!-- Artykuł 3 -->
+                <article class="luxury-card-light p-6 rounded-3xl space-y-3">
+                    <span class="text-[10px] font-bold uppercase tracking-wider text-amber-600 bg-amber-50 px-2.5 py-1 rounded-md inline-block">Edukacja Językowa</span>
+                    <h3 class="font-bold text-bk-slate text-base leading-snug">Dlaczego warto uczyć się języka hiszpańskiego online?</h3>
+                    <p class="text-slate-600 text-xs leading-relaxed">
+                        Rola znajomości języków obcych w rozwijaniu relacji międzynarodowych i zwiększaniu atutów na rynku pracy.
+                    </p>
+                    <a href="kurs-hiszpanskiego.html" class="inline-block text-xs font-bold text-bk-gold hover:underline pt-2">Zobacz kurs &rarr;</a>
+                </article>
+            </div>
+        </section>
+
+        <!-- CENTRUM KONTAKTU I MAPA -->
         <section id="kontakt" class="max-w-7xl mx-auto px-6">
             <div class="luxury-card-light rounded-3xl overflow-hidden shadow-xl">
                 <div class="grid lg:grid-cols-12">
                     
+                    <!-- FORMULARZ KONTAKTOWY -->
                     <div class="lg:col-span-7 p-8 sm:p-14 space-y-8 bg-white">
                         <div>
                             <span class="text-xs font-extrabold uppercase tracking-[0.3em] text-bk-gold">Kontakt Oficjalny</span>
@@ -400,6 +506,7 @@
                         </form>
                     </div>
 
+                    <!-- METRYKA PAŃSTWOWA Z MAPĄ GOOGLE -->
                     <div class="lg:col-span-5 p-8 sm:p-14 bg-bk-slate text-white border-t lg:border-t-0 lg:border-l border-slate-800 flex flex-col justify-between space-y-6">
                         <div>
                             <span class="text-xs font-extrabold uppercase tracking-widest text-amber-400">Dane Rejestrowe i Siedziba</span>
@@ -437,6 +544,7 @@
                             </div>
                         </div>
 
+                        <!-- MODUŁ INTERAKTYWNEJ MAPY GOOGLE -->
                         <div class="space-y-2 pt-2">
                             <span class="text-[10px] font-extrabold uppercase tracking-widest text-slate-400 block">Lokalizacja na Mapie:</span>
                             <div class="w-full h-44 rounded-2xl overflow-hidden border border-slate-700 shadow-md">
@@ -460,9 +568,11 @@
 
     </main>
 
+    <!-- FOOTER / STOPKA Z WBUDOWANYM SEKTOREM FAQ -->
     <footer class="bg-white border-t border-slate-200 pt-16 pb-12 text-xs text-slate-600">
         <div class="max-w-7xl mx-auto px-6 space-y-12">
             
+            <!-- SEKCJA FAQ W STOPCE -->
             <div id="faq" class="space-y-6 pb-12 border-b border-slate-200">
                 <div class="flex flex-col md:flex-row justify-between items-start md:items-end gap-2">
                     <div>
@@ -503,6 +613,7 @@
                 </div>
             </div>
 
+            <!-- LINKI NAWIGACYJNE STOPKI -->
             <div class="flex flex-col md:flex-row justify-between items-center gap-4 border-b border-slate-200 pb-8">
                 <div class="flex items-center gap-3">
                     <div class="w-8 h-8 rounded-lg bg-bk-slate text-amber-400 font-serif font-black flex items-center justify-center text-sm">BK</div>
@@ -516,6 +627,7 @@
                 </div>
             </div>
 
+            <!-- COPIRIGHT I METRYKA -->
             <div class="flex flex-col sm:flex-row justify-between items-center gap-2 text-slate-500">
                 <p>&copy; 2026 Fundacja BK Capital. Wszystkie prawa zastrzeżone.</p>
                 <p>KRS: 0000861638 &bull; NIP: 6793206112 &bull; REGON: 387222545</p>
@@ -523,6 +635,14 @@
         </div>
     </footer>
 
+    <!-- PŁYWAJĄCY PRZYCISK KONTAKTOWY (FLOATING ACTION BUTTON) -->
+    <div class="fixed bottom-6 right-6 z-40">
+        <button onclick="openModal('top-contact-modal')" class="w-14 h-14 rounded-full gold-gradient-bg text-white font-bold text-2xl flex items-center justify-center shadow-2xl hover:scale-110 transition-transform focus:outline-none" aria-label="Szybki kontakt">
+            💬
+        </button>
+    </div>
+
+    <!-- MODAL WYBORU SZYBKIEGO KONTAKTU -->
     <div id="top-contact-modal" class="fixed inset-0 z-50 bg-slate-900/60 backdrop-blur-md hidden items-center justify-center p-4">
         <div class="bg-white rounded-3xl max-w-sm w-full p-6 space-y-5 shadow-2xl border border-slate-200 text-center relative">
             <button onclick="closeModal('top-contact-modal')" class="absolute top-4 right-4 text-slate-400 hover:text-slate-700 text-2xl leading-none">&times;</button>
@@ -551,6 +671,7 @@
         </div>
     </div>
 
+    <!-- MODAL STATUT -->
     <div id="statut-modal" class="fixed inset-0 z-50 bg-slate-900/60 backdrop-blur-md hidden items-center justify-center p-4">
         <div class="bg-white rounded-3xl max-w-2xl w-full max-h-[85vh] flex flex-col overflow-hidden border border-slate-200 shadow-2xl">
             <div class="p-6 bg-bk-slate text-white flex justify-between items-center">
@@ -567,6 +688,7 @@
         </div>
     </div>
 
+    <!-- MODAL RODO -->
     <div id="rodo-modal" class="fixed inset-0 z-50 bg-slate-900/60 backdrop-blur-md hidden items-center justify-center p-4">
         <div class="bg-white rounded-3xl max-w-lg w-full max-h-[85vh] flex flex-col overflow-hidden border border-slate-200 shadow-2xl">
             <div class="p-6 bg-bk-slate text-white flex justify-between items-center">
@@ -582,6 +704,7 @@
         </div>
     </div>
 
+    <!-- MODAL COOKIES -->
     <div id="cookies-modal" class="fixed inset-0 z-50 bg-slate-900/60 backdrop-blur-md hidden items-center justify-center p-4">
         <div class="bg-white rounded-3xl max-w-lg w-full max-h-[85vh] flex flex-col overflow-hidden border border-slate-200 shadow-2xl">
             <div class="p-6 bg-bk-slate text-white flex justify-between items-center">
@@ -613,6 +736,7 @@
         }
     </script>
 
+    <!-- Tawk.to Script -->
     <script type="text/javascript">
         var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
         (function(){
