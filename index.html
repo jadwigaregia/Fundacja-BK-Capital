@@ -76,7 +76,7 @@
 <body class="min-h-screen flex flex-col antialiased selection:bg-bk-gold selection:text-white">
 
     <!-- PASEK REJESTROWY TOP -->
-    <div class="bg-bk-slate text-slate-200 text-[11px] py-2 px-6 border-b border-slate-800">
+    <div class="bg-bk-slate text-slate-200 text-[11px] py-2.5 px-6 border-b border-slate-800">
         <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-2">
             <div class="flex flex-wrap items-center justify-center md:justify-start gap-4">
                 <span class="flex items-center gap-1.5 font-bold text-amber-400 uppercase tracking-widest text-[10px]">
@@ -85,12 +85,6 @@
                 </span>
                 <span class="hidden lg:inline text-slate-600">|</span>
                 <span class="hidden lg:inline text-slate-300">Siedziba: <strong class="text-white">ul. Celna 13/17, Kraków</strong></span>
-            </div>
-            <!-- ZAMIENIONE LINKI NA PRZYCISK SZYBKIEGO KONTAKTU W PASEKU TOP -->
-            <div>
-                <button onclick="openModal('top-contact-modal')" class="px-3 py-1 rounded-lg gold-gradient-bg text-white font-extrabold text-[10px] uppercase tracking-wider hover:brightness-110 transition-all shadow-sm flex items-center gap-1.5">
-                    📞 ✉️ Szybki Kontakt
-                </button>
             </div>
         </div>
     </div>
@@ -538,7 +532,7 @@
         </div>
     </footer>
 
-    <!-- MODAL WYBORU SZYBKIEGO KONTAKTU (ZADZWROŃ LUB NAPISZ) -->
+    <!-- MODAL WYBORU SZYBKIEGO KONTAKTU -->
     <div id="top-contact-modal" class="fixed inset-0 z-50 bg-slate-900/60 backdrop-blur-md hidden items-center justify-center p-4">
         <div class="bg-white rounded-3xl max-w-sm w-full p-6 space-y-5 shadow-2xl border border-slate-200 text-center relative">
             <button onclick="closeModal('top-contact-modal')" class="absolute top-4 right-4 text-slate-400 hover:text-slate-700 text-2xl leading-none">&times;</button>
