@@ -239,7 +239,7 @@
             </div>
         </section>
 
-        <!-- WŁADZE I TRANSPARENTNOŚĆ (WYMÓG TECHSOUP & GOOGLE AD GRANTS) -->
+        <!-- WŁADZE I TRANSPARENTNOŚĆ -->
         <section id="wladze" class="max-w-7xl mx-auto px-6 space-y-8">
             <div class="text-center max-w-3xl mx-auto space-y-3">
                 <span class="text-xs font-extrabold uppercase tracking-[0.3em] text-bk-gold">Niezależność i Przejrzystość</span>
@@ -414,7 +414,7 @@
             </div>
         </section>
 
-        <!-- SEKCJA BAZY WIEDZY & SEO ARTICLES (KLUCZOWA POD GOOGLE AD GRANTS I POZYCJONOWANIE) -->
+        <!-- SEKCJA BAZY WIEDZY & SEO ARTICLES -->
         <section id="baza-wiedzy" class="max-w-7xl mx-auto px-6 space-y-8">
             <div class="flex flex-col md:flex-row justify-between items-start md:items-end gap-4">
                 <div>
@@ -464,7 +464,7 @@
             <div class="luxury-card-light rounded-3xl overflow-hidden shadow-xl">
                 <div class="grid lg:grid-cols-12">
                     
-                    <!-- FORMULARZ KONTAKTOWY -->
+                    <!-- FORMULARZ KONTAKTOWY PODŁĄCZONY POD FORMSPREE -->
                     <div class="lg:col-span-7 p-8 sm:p-14 space-y-8 bg-white">
                         <div>
                             <span class="text-xs font-extrabold uppercase tracking-[0.3em] text-bk-gold">Kontakt Oficjalny</span>
@@ -472,21 +472,21 @@
                             <p class="text-slate-500 text-xs mt-2">Prześlij wiadomość – sekretariat odpowie tak szybko, jak to możliwe.</p>
                         </div>
 
-                        <form onsubmit="handleFormSubmit(event)" class="space-y-4">
+                        <form action="https://formspree.io/f/mppzdpky" method="POST" class="space-y-4">
                             <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
                                 <div>
                                     <label class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-2">Imię i Nazwisko:</label>
-                                    <input type="text" required placeholder="np. Jan Kowalski" class="w-full p-3.5 bg-slate-50 border border-slate-200 rounded-xl text-xs text-bk-slate focus:outline-none focus:border-bk-gold">
+                                    <input type="text" name="name" required placeholder="np. Jan Kowalski" class="w-full p-3.5 bg-slate-50 border border-slate-200 rounded-xl text-xs text-bk-slate focus:outline-none focus:border-bk-gold">
                                 </div>
                                 <div>
                                     <label class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-2">Telefon lub E-mail:</label>
-                                    <input type="text" required placeholder="Dane do kontaktu" class="w-full p-3.5 bg-slate-50 border border-slate-200 rounded-xl text-xs text-bk-slate focus:outline-none focus:border-bk-gold">
+                                    <input type="text" name="reply_to" required placeholder="Dane do kontaktu" class="w-full p-3.5 bg-slate-50 border border-slate-200 rounded-xl text-xs text-bk-slate focus:outline-none focus:border-bk-gold">
                                 </div>
                             </div>
 
                             <div>
                                 <label class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-2">Wybrany Sektor Działalności:</label>
-                                <select id="sektor-select" class="w-full p-3.5 bg-slate-50 border border-slate-200 rounded-xl text-xs text-bk-slate focus:outline-none focus:border-bk-gold">
+                                <select name="sector" id="sektor-select" class="w-full p-3.5 bg-slate-50 border border-slate-200 rounded-xl text-xs text-bk-slate focus:outline-none focus:border-bk-gold">
                                     <option>Sektor Edukacji Językowej (Kurs Hiszpańskiego)</option>
                                     <option>Sektor Aktywizacji Zawodowej</option>
                                     <option>Sektor Integracji Cudzoziemców</option>
@@ -497,7 +497,7 @@
 
                             <div>
                                 <label class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-2">Treść wiadomości:</label>
-                                <textarea rows="4" placeholder="Napisz w czym możemy Ci pomóc..." class="w-full p-3.5 bg-slate-50 border border-slate-200 rounded-xl text-xs text-bk-slate focus:outline-none focus:border-bk-gold"></textarea>
+                                <textarea name="message" rows="4" required placeholder="Napisz w czym możemy Ci pomóc..." class="w-full p-3.5 bg-slate-50 border border-slate-200 rounded-xl text-xs text-bk-slate focus:outline-none focus:border-bk-gold"></textarea>
                             </div>
 
                             <button type="submit" class="w-full py-4 gold-gradient-bg text-white font-extrabold text-xs uppercase tracking-widest rounded-xl transition-all shadow-md hover:brightness-110">
@@ -721,11 +721,6 @@
     </div>
 
     <script>
-        function handleFormSubmit(e) {
-            e.preventDefault();
-            alert('Dziękujemy. Wiadomość została przesłana do sekretariatu Fundacji BK Capital.');
-        }
-
         function openModal(id) {
             const m = document.getElementById(id);
             if(m) { m.classList.remove('hidden'); m.classList.add('flex'); }
