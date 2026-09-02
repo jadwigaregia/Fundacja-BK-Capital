@@ -143,7 +143,7 @@
                         </h1>
 
                         <p class="text-slate-600 text-base sm:text-lg font-normal leading-relaxed max-w-2xl mx-auto lg:mx-0">
-                            Fundacja BK Capital powstała w Krakowie jako niezależna inicjatywa łącząca bezpłatne poradnictwo, wsparcie w adaptacji społeczno-zawodowej oraz rozwój kompetencji językowych i biznesowych w zmieniającym się świecie.
+                            Fundacja BK Capital powstawała w Krakowie jako niezależna inicjatywa łącząca bezpłatne poradnictwo, wsparcie w adaptacji społeczno-zawodowej oraz rozwój kompetencji językowych i biznesowych w zmieniającym się świecie.
                         </p>
 
                         <div class="pt-2 flex flex-wrap gap-4 justify-center lg:justify-start">
@@ -642,6 +642,22 @@
         </button>
     </div>
 
+    <!-- BANER COOKIES (WYMÓG PRAWNY RODO) -->
+    <div id="cookie-banner" class="fixed bottom-4 left-4 right-4 sm:left-auto sm:right-6 sm:max-w-md bg-bk-slate text-white p-5 rounded-2xl shadow-2xl border border-slate-800 z-50 flex flex-col gap-3 text-xs hidden">
+        <div class="flex items-start gap-3">
+            <span class="text-xl shrink-0" aria-hidden="true">🍪</span>
+            <p class="text-slate-300 leading-relaxed">
+                Strona korzysta z plików cookie w celu zapewnienia prawidłowego działania i obsługi zgłoszeń. Szczegóły znajdziesz w naszej 
+                <button onclick="openModal('cookies-modal')" class="text-amber-400 underline font-semibold focus:outline-none">Polityce Cookies</button>.
+            </p>
+        </div>
+        <div class="flex items-center justify-end gap-2 pt-1">
+            <button onclick="acceptCookies()" class="px-4 py-2 gold-gradient-bg hover:brightness-110 text-white font-bold rounded-xl transition-all">
+                Rozumiem i akceptuję
+            </button>
+        </div>
+    </div>
+
     <!-- MODAL WYBORU SZYBKIEGO KONTAKTU -->
     <div id="top-contact-modal" class="fixed inset-0 z-50 bg-slate-900/60 backdrop-blur-md hidden items-center justify-center p-4">
         <div class="bg-white rounded-3xl max-w-sm w-full p-6 space-y-5 shadow-2xl border border-slate-200 text-center relative">
@@ -712,7 +728,7 @@
                 <button onclick="closeModal('cookies-modal')" class="text-slate-400 hover:text-white text-2xl leading-none">&times;</button>
             </div>
             <div class="p-6 overflow-y-auto text-xs text-slate-600 space-y-3 leading-relaxed">
-                <p>Serwis wykorzystuje pliki cookies niezbędne do prawidłowego wyświetlania i obsługi witryny internetowej.</p>
+                <p>Serwis wykorzystuje pliki cookies niezbędne do prawidłowego wyświetlania i obsługi witryny internetowej oraz przechowywania preferencji zgód użytkownika.</p>
             </div>
             <div class="p-4 bg-slate-50 border-t border-slate-200 flex justify-end">
                 <button onclick="closeModal('cookies-modal')" class="px-6 py-2.5 bg-slate-800 text-white font-bold text-xs rounded-xl">Zamknij</button>
@@ -728,6 +744,18 @@
         function closeModal(id) {
             const m = document.getElementById(id);
             if(m) { m.classList.add('hidden'); m.classList.remove('flex'); }
+        }
+
+        // Obsługa pamięci zgody na pliki cookies
+        document.addEventListener('DOMContentLoaded', () => {
+            if (!localStorage.getItem('bk_cookies_accepted')) {
+                document.getElementById('cookie-banner').classList.remove('hidden');
+            }
+        });
+
+        function acceptCookies() {
+            localStorage.setItem('bk_cookies_accepted', 'true');
+            document.getElementById('cookie-banner').classList.add('hidden');
         }
     </script>
 
