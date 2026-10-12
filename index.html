@@ -366,7 +366,7 @@ Total output lines: 1
                             <p class="text-slate-500 text-xs mt-2">Prześlij wiadomość – sekretariat odpowie tak szybko, jak to możliwe.</p>
                         </div>
 
-                        <form action="https://formspree.io/f/mppzdpky" method="POST" class="space-y-4">
+                        <form id="contact-form" action="https://formspree.io/f/mppzdpky" method="POST" class="space-y-4">
                             <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
                                 <div>
                                     <label class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-2">Imię i Nazwisko:</label>
@@ -393,7 +393,7 @@ Total output lines: 1
                                 <textarea name="message" rows="4" required placeholder="Napisz w czym możemy Ci pomóc..." class="w-full p-3.5 bg-slate-50 border border-slate-200 rounded-xl text-xs text-bk-slate focus:outline-none focus:border-bk-blue"></textarea>
                             </div>
 
-                            <button type="submit" class="w-full py-4 navy-gradient-bg text-white font-extrabold text-xs uppercase tracking-widest rounded-xl transition-all shadow-md hover:brightness-110">
+                            <button type="submit" data-fs-submit-btn class="w-full py-4 navy-gradient-bg text-white font-extrabold text-xs uppercase tracking-widest rounded-xl transition-all shadow-md hover:brightness-110">
                                 Wyślij Wiadomość
                             </button>
                             <p class="text-[10px] leading-relaxed text-slate-500">Dane z formularza wykorzystamy do odpowiedzi na wiadomość. Szczegóły przetwarzania opisuje <a href="polityka-prywatnosci.html" class="text-blue-800 underline font-semibold">informacja RODO</a>.</p>
@@ -669,6 +669,33 @@ Total output lines: 1
         }
         document.addEventListener('DOMContentLoaded', showCookieBanner);
     </script>
+
+    <script>
+        window.formspree = window.formspree || function () {
+            (window.formspree.q = window.formspree.q || []).push(arguments);
+        };
+        window.formspree('initForm', {
+            formElement: '#contact-form',
+            formId: 'mppzdpky',
+            renderSuccess: ({ form }) => {
+                form.className = 'space-y-5';
+                form.innerHTML = `
+                    <div role="status" aria-live="polite" class="rounded-2xl border border-blue-200 bg-blue-50 p-6 sm:p-8 text-center">
+                        <div class="mx-auto mb-5 flex h-14 w-14 items-center justify-center rounded-full navy-gradient-bg text-white shadow-md" aria-hidden="true">
+                            <svg class="h-7 w-7" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="m5 12 4 4L19 6"/></svg>
+                        </div>
+                        <p class="text-xs font-extrabold uppercase tracking-[0.2em] text-bk-blue">Fundacja BK Capital</p>
+                        <h3 class="mt-2 font-sans text-2xl sm:text-3xl font-extrabold text-bk-slate">Dziękujemy za wiadomość!</h3>
+                        <p class="mx-auto mt-3 max-w-md text-sm leading-relaxed text-slate-600">Twoja wiadomość została wysłana do Fundacji BK Capital. Skontaktujemy się z Tobą, korzystając z podanych danych.</p>
+                        <div class="mt-6 flex flex-col sm:flex-row justify-center gap-3">
+                            <a href="mailto:kontakt@fundacjabkcapital.pl" class="rounded-xl navy-gradient-bg px-5 py-3 text-xs font-bold text-white hover:brightness-110">Napisz do Fundacji</a>
+                            <a href="#o-nas" class="rounded-xl border border-slate-300 bg-white px-5 py-3 text-xs font-bold text-bk-slate hover:bg-slate-50">Wróć do strony</a>
+                        </div>
+                    </div>`;
+            }
+        });
+    </script>
+    <script src="https://unpkg.com/@formspree/ajax@1" defer></script>
 
 </body>
 </html>
