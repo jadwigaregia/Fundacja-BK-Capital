@@ -23,14 +23,14 @@
                         'bk-card': '#ffffff',
                         'bk-slate': '#0f172a',
                         'bk-navy': '#1e293b',
-                        'bk-blue': '#2563eb',
-                        'bk-gold': '#d97706',
-                        'bk-gold-hover': '#b45309',
-                        'bk-gold-light': '#fef3c7',
+                        'bk-blue': '#244768',
+                        'bk-gold': '#244768',
+                        'bk-gold-hover': '#17324f',
+                        'bk-gold-light': '#edf3f8',
                         'bk-border': '#e2e8f0',
                     },
                     fontFamily: {
-                        serif: ['Playfair Display', 'Georgia', 'serif'],
+                        serif: ['Plus Jakarta Sans', 'system-ui', 'sans-serif'],
                         sans: ['Plus Jakarta Sans', 'system-ui', 'sans-serif'],
                     }
                 }
@@ -41,22 +41,23 @@
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;0,900;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
     <style>
         .krs-value { font-variant-numeric: tabular-nums; white-space: nowrap; letter-spacing: -0.035em; }
+        .stat-value { display: block; font-family: 'Plus Jakarta Sans', sans-serif; font-size: clamp(12px, 2.1vw, 30px); font-weight: 700; line-height: 1.2; letter-spacing: -0.04em; color: #193854; font-variant-numeric: tabular-nums; white-space: nowrap; }
         body { 
             font-family: 'Plus Jakarta Sans', sans-serif; 
             background-color: #f8fafc; 
             color: #0f172a; 
         }
-        .gold-gradient-text {
-            background: linear-gradient(135deg, #b45309 0%, #d97706 50%, #f59e0b 100%);
+        .navy-gradient-text {
+            background: linear-gradient(135deg, #17324f 0%, #244768 50%, #7895af 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
-        .gold-gradient-bg {
-            background: linear-gradient(135deg, #d97706 0%, #b45309 100%);
+        .navy-gradient-bg {
+            background: linear-gradient(135deg, #244768 0%, #17324f 100%);
         }
         .luxury-card-light {
             background: #ffffff;
@@ -65,7 +66,7 @@
             transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
         }
         .luxury-card-light:hover {
-            border-color: rgba(217, 119, 6, 0.4);
+            border-color: rgba(36, 71, 104, 0.28);
             transform: translateY(-4px);
             box-shadow: 0 20px 40px -10px rgba(15, 23, 42, 0.12);
         }
@@ -75,19 +76,19 @@
             -webkit-backdrop-filter: blur(20px);
         }
         .hero-pattern-light {
-            background-image: radial-gradient(rgba(217, 119, 6, 0.12) 1px, transparent 1px);
+            background-image: radial-gradient(rgba(36, 71, 104, 0.08) 1px, transparent 1px);
             background-size: 28px 28px;
         }
     </style>
 </head>
-<body class="min-h-screen flex flex-col antialiased selection:bg-bk-gold selection:text-white relative">
+<body class="min-h-screen flex flex-col antialiased selection:bg-bk-blue selection:text-white relative">
 
     <!-- PASEK REJESTROWY TOP -->
     <div class="bg-bk-slate text-slate-200 text-[11px] py-2.5 px-3 sm:px-6 border-b border-slate-800">
         <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-2">
             <div class="flex flex-wrap items-center justify-center md:justify-start gap-4">
-                <span class="flex flex-wrap items-center justify-center gap-x-2 gap-y-1 font-bold text-amber-400 uppercase tracking-normal sm:tracking-widest text-[9px] sm:text-[10px]">
-                    <span class="w-2 h-2 rounded-full bg-amber-400 animate-pulse" aria-hidden="true"></span>
+                <span class="flex flex-wrap items-center justify-center gap-x-2 gap-y-1 font-bold text-sky-300 uppercase tracking-normal sm:tracking-widest text-[9px] sm:text-[10px]">
+                    <span class="w-2 h-2 rounded-full bg-sky-300 animate-pulse" aria-hidden="true"></span>
                     <span>KRS: <span class="krs-value">0000861638</span></span><span aria-hidden="true">&bull;</span><span>NIP: <span class="krs-value">6793206112</span></span><span aria-hidden="true">&bull;</span><span>REGON: <span class="krs-value">387222545</span></span>
                 </span>
                 <span class="hidden lg:inline text-slate-600">|</span>
@@ -107,18 +108,18 @@
 
             <!-- MENU DESKTOP -->
             <nav class="hidden xl:flex items-center gap-5 text-[11px] xl:text-xs font-bold uppercase tracking-wider text-slate-700">
-                <a href="#o-nas" class="hover:text-bk-gold transition-colors">O Instytucji</a>
-                <a href="#misja" class="hover:text-bk-gold transition-colors">Wartości</a>
-                <a href="#sektory" class="hover:text-bk-gold transition-colors">Sektory Działalności</a>
+                <a href="#o-nas" class="hover:text-bk-blue transition-colors">O Instytucji</a>
+                <a href="#misja" class="hover:text-bk-blue transition-colors">Wartości</a>
+                <a href="#sektory" class="hover:text-bk-blue transition-colors">Sektory Działalności</a>
                 
-                <a href="#baza-wiedzy" class="hover:text-bk-gold transition-colors">Aktualności & SEO</a>
-                <a href="#wladze" class="hover:text-bk-gold transition-colors">Zarząd</a>
-                <a href="#kontakt" class="hover:text-bk-gold transition-colors">Kontakt</a>
-                <a href="#faq" class="hover:text-bk-gold transition-colors">FAQ</a>
+                <a href="#baza-wiedzy" class="hover:text-bk-blue transition-colors">Aktualności & SEO</a>
+                <a href="#wladze" class="hover:text-bk-blue transition-colors">Zarząd</a>
+                <a href="#kontakt" class="hover:text-bk-blue transition-colors">Kontakt</a>
+                <a href="#faq" class="hover:text-bk-blue transition-colors">FAQ</a>
             </nav>
 
             <div class="flex items-center gap-2">
-                <button onclick="openModal('top-contact-modal')" class="px-3 sm:px-5 py-2.5 rounded-xl gold-gradient-bg text-white font-extrabold text-[10px] sm:text-xs uppercase tracking-wider hover:brightness-110 transition-all shadow-md shadow-amber-500/20 whitespace-nowrap"><span class="sm:hidden">Kontakt</span><span class="hidden sm:inline">Szybki kontakt</span></button>
+                <button onclick="openModal('top-contact-modal')" class="px-3 sm:px-5 py-2.5 rounded-xl navy-gradient-bg text-white font-extrabold text-[10px] sm:text-xs uppercase tracking-wider hover:brightness-110 transition-all shadow-md shadow-blue-900/15 whitespace-nowrap"><span class="sm:hidden">Kontakt</span><span class="hidden sm:inline">Szybki kontakt</span></button>
                 <button id="mobile-menu-button" type="button" onclick="toggleMobileMenu()" class="xl:hidden w-11 h-11 rounded-xl border border-slate-300 text-bk-slate flex items-center justify-center hover:bg-slate-100" aria-label="Otwórz menu" aria-expanded="false" aria-controls="mobile-menu">
                     <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path stroke-linecap="round" d="M4 6h16M4 12h16M4 18h16"/></svg>
                 </button>
@@ -126,14 +127,14 @@
         </div>
         <nav id="mobile-menu" class="hidden xl:hidden border-t border-slate-200 bg-white px-4 py-3 shadow-lg" aria-label="Menu mobilne">
             <div class="max-w-7xl mx-auto grid grid-cols-2 gap-1 text-xs font-bold uppercase tracking-wide text-slate-700">
-                <a onclick="closeMobileMenu()" href="#o-nas" class="rounded-lg p-3 hover:bg-amber-50">O fundacji</a>
-                <a onclick="closeMobileMenu()" href="#misja" class="rounded-lg p-3 hover:bg-amber-50">Wartości</a>
-                <a onclick="closeMobileMenu()" href="#sektory" class="rounded-lg p-3 hover:bg-amber-50">Usługi</a>
-                <a onclick="closeMobileMenu()" href="#wladze" class="rounded-lg p-3 hover:bg-amber-50">Zarząd</a>
-                <a onclick="closeMobileMenu()" href="#baza-wiedzy" class="rounded-lg p-3 hover:bg-amber-50">Aktualności</a>
-                <a onclick="closeMobileMenu()" href="#kontakt" class="rounded-lg p-3 hover:bg-amber-50">Kontakt</a>
-                <a onclick="closeMobileMenu()" href="#faq" class="rounded-lg p-3 hover:bg-amber-50">FAQ</a>
-                <a href="polityka-prywatnosci.html" class="rounded-lg p-3 hover:bg-amber-50">RODO</a>
+                <a onclick="closeMobileMenu()" href="#o-nas" class="rounded-lg p-3 hover:bg-blue-50">O fundacji</a>
+                <a onclick="closeMobileMenu()" href="#misja" class="rounded-lg p-3 hover:bg-blue-50">Wartości</a>
+                <a onclick="closeMobileMenu()" href="#sektory" class="rounded-lg p-3 hover:bg-blue-50">Usługi</a>
+                <a onclick="closeMobileMenu()" href="#wladze" class="rounded-lg p-3 hover:bg-blue-50">Zarząd</a>
+                <a onclick="closeMobileMenu()" href="#baza-wiedzy" class="rounded-lg p-3 hover:bg-blue-50">Aktualności</a>
+                <a onclick="closeMobileMenu()" href="#kontakt" class="rounded-lg p-3 hover:bg-blue-50">Kontakt</a>
+                <a onclick="closeMobileMenu()" href="#faq" class="rounded-lg p-3 hover:bg-blue-50">FAQ</a>
+                <a href="polityka-prywatnosci.html" class="rounded-lg p-3 hover:bg-blue-50">RODO</a>
             </div>
         </nav>
     </header>
@@ -146,13 +147,13 @@
                 <div class="grid lg:grid-cols-12 gap-12 items-center">
                     
                     <div class="lg:col-span-7 space-y-8 text-center lg:text-left">
-                        <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-amber-50 border border-amber-200 text-bk-gold text-xs font-bold uppercase tracking-widest">
+                        <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-blue-50 border border-blue-200 text-bk-blue text-xs font-bold uppercase tracking-widest">
                             🏛️ Działalność Statutowa &bull; Rejestracja Państwowa
                         </div>
 
-                        <h1 class="font-serif text-4xl sm:text-6xl font-extrabold text-bk-slate leading-[1.12] tracking-tight">
+                        <h1 class="font-sans text-4xl sm:text-6xl font-extrabold text-bk-slate leading-[1.12] tracking-tight">
                             Doradztwo gospodarcze, mobilność pracowników i restrukturyzacja przedsiębiorstw. <br>
-                            <span class="gold-gradient-text">Fundacja BK Capital Kraków.</span>
+                            <span class="navy-gradient-text">Fundacja BK Capital Kraków.</span>
                         </h1>
 
                         <p class="text-slate-600 text-base sm:text-lg font-normal leading-relaxed max-w-2xl mx-auto lg:mx-0">
@@ -160,7 +161,7 @@
                         </p>
 
                         <div class="pt-2 flex flex-wrap gap-4 justify-center lg:justify-start">
-                            <a href="#sektory" class="px-8 py-4 rounded-xl gold-gradient-bg text-white font-extrabold text-xs uppercase tracking-widest shadow-lg shadow-amber-500/20 hover:brightness-110 transition-all">
+                            <a href="#sektory" class="px-8 py-4 rounded-xl navy-gradient-bg text-white font-extrabold text-xs uppercase tracking-widest shadow-lg shadow-blue-900/15 hover:brightness-110 transition-all">
                                 Poznaj Sektory Działalności
                             </a>
                             
@@ -169,15 +170,15 @@
                         <!-- LICZNIKI REJESTROWE -->
                         <div class="pt-8 grid grid-cols-3 gap-2 sm:gap-6 border-t border-slate-200 max-w-lg mx-auto lg:mx-0 text-center lg:text-left">
                             <div>
-                                <span class="font-serif text-3xl font-bold gold-gradient-text">2020</span>
+                                <span class="stat-value">2020</span>
                                 <span class="block text-xs font-semibold text-slate-500 uppercase tracking-wider mt-1">Rok Rejestracji</span>
                             </div>
                             <div>
-                                <span class="font-serif text-[clamp(0.7rem,3.8vw,1.75rem)] sm:text-3xl font-bold text-bk-slate krs-value">0000861638</span>
+                                <span class="stat-value krs-value">0000861638</span>
                                 <span class="block text-xs font-semibold text-slate-500 uppercase tracking-wider mt-1">Rejestr KRS</span>
                             </div>
                             <div>
-                                <span class="font-serif text-3xl font-bold text-emerald-600">100%</span>
+                                <span class="stat-value">100%</span>
                                 <span class="block text-xs font-semibold text-slate-500 uppercase tracking-wider mt-1">Transparencji</span>
                             </div>
                         </div>
@@ -191,7 +192,7 @@
                                      alt="Warsztaty i konsultacje w Krakowie" 
                                      class="rounded-2xl object-cover w-full h-[420px]">
                                 <div class="absolute bottom-6 left-6 right-6 p-5 rounded-2xl bg-white/95 border border-slate-200 backdrop-blur-md shadow-lg">
-                                    <span class="text-xs font-extrabold text-bk-gold uppercase tracking-widest block">Centrum Operacyjne Kraków</span>
+                                    <span class="text-xs font-extrabold text-bk-blue uppercase tracking-widest block">Centrum Operacyjne Kraków</span>
                                     <p class="text-xs text-slate-600 mt-1 leading-relaxed">Siedziba przy ul. Celnej 13/17 obsługuje inicjatywy na terenie Krakowa oraz całej Małopolski.</p>
                                 </div>
                             </div>
@@ -208,8 +209,8 @@
                 <div class="grid lg:grid-cols-12 gap-12 items-center">
                     
                     <div class="lg:col-span-7 space-y-6">
-                        <span class="text-xs font-extrabold uppercase tracking-[0.3em] text-bk-gold">O Naszej Fundacji</span>
-                        <h2 class="font-serif text-3xl sm:text-4xl font-bold text-bk-slate leading-tight">
+                        <span class="text-xs font-extrabold uppercase tracking-[0.3em] text-bk-blue">O Naszej Fundacji</span>
+                        <h2 class="font-sans text-3xl sm:text-4xl font-bold text-bk-slate leading-tight">
                             Świadome budowanie bezpiecznego otoczenia społeczno-gospodarczego.
                         </h2>
                         <p class="text-slate-600 text-sm sm:text-base leading-relaxed">
@@ -220,27 +221,27 @@
                         </p>
                         <div class="pt-2 grid sm:grid-cols-2 gap-4 text-xs font-semibold text-slate-700">
                             <div class="flex items-center gap-2.5 p-3 rounded-xl bg-slate-50 border border-slate-200">
-                                <span class="text-emerald-600 text-base">✓</span> Pełna jawność i formalizm prawny
+                                <span class="text-bk-blue text-base">✓</span> Pełna jawność i formalizm prawny
                             </div>
                             <div class="flex items-center gap-2.5 p-3 rounded-xl bg-slate-50 border border-slate-200">
-                                <span class="text-emerald-600 text-base">✓</span> Bezpłatne projekty edukacyjne
+                                <span class="text-bk-blue text-base">✓</span> Bezpłatne projekty edukacyjne
                             </div>
                         </div>
                     </div>
 
                     <div class="lg:col-span-5 space-y-4">
                         <div class="p-6 rounded-2xl bg-slate-50 border border-slate-200 space-y-1">
-                            <span class="text-xs uppercase font-extrabold text-bk-gold tracking-wider block">Nazwa Pełna</span>
+                            <span class="text-xs uppercase font-extrabold text-bk-blue tracking-wider block">Nazwa Pełna</span>
                             <p class="text-bk-slate font-bold text-base">FUNDACJA BK CAPITAL</p>
                             <p class="text-slate-500 text-xs">Forma prawna: Fundacja (NGO)</p>
                         </div>
                         <div class="p-6 rounded-2xl bg-slate-50 border border-slate-200 space-y-1">
-                            <span class="text-xs uppercase font-extrabold text-bk-gold tracking-wider block">Lokalizacja Siedziby</span>
+                            <span class="text-xs uppercase font-extrabold text-bk-blue tracking-wider block">Lokalizacja Siedziby</span>
                             <p class="text-bk-slate font-bold text-base">ul. Celna 13/17, 30-507 Kraków</p>
                             <p class="text-slate-500 text-xs">Województwo Małopolskie, Rzeczpospolita Polska</p>
                         </div>
                         <div class="p-6 rounded-2xl bg-slate-50 border border-slate-200 space-y-1">
-                            <span class="text-xs uppercase font-extrabold text-bk-gold tracking-wider block">Rejestracja Sądowa</span>
+                            <span class="text-xs uppercase font-extrabold text-bk-blue tracking-wider block">Rejestracja Sądowa</span>
                             <p class="text-bk-slate font-bold text-base">Sąd Rejonowy dla Krakowa-Śródmieścia</p>
                             <p class="text-slate-500 text-xs">XI Wydział Gospodarczy KRS &bull; Data wpisu: 02.10.2020 r.</p>
                         </div>
@@ -253,8 +254,8 @@
         <!-- WŁADZE I TRANSPARENTNOŚĆ -->
         <section id="wladze" class="max-w-7xl mx-auto px-6 space-y-8">
             <div class="text-center max-w-3xl mx-auto space-y-3">
-                <span class="text-xs font-extrabold uppercase tracking-[0.3em] text-bk-gold">Niezależność i Przejrzystość</span>
-                <h2 class="font-serif text-3xl sm:text-4xl font-bold text-bk-slate">Władze i Zarząd Fundacji</h2>
+                <span class="text-xs font-extrabold uppercase tracking-[0.3em] text-bk-blue">Niezależność i Przejrzystość</span>
+                <h2 class="font-sans text-3xl sm:text-4xl font-bold text-bk-slate">Władze i Zarząd Fundacji</h2>
                 <p class="text-slate-600 text-xs sm:text-sm">
                     Działamy w oparciu o jawne struktury organizacyjne zgodne z przepisami ustawy z dnia 6 kwietnia 1984 r. o fundacjach:
                 </p>
@@ -267,7 +268,7 @@
 Total output lines: 1
 
                         <div class="sm:col-span-3 space-y-4">
-                            <div><h3 class="font-serif text-2xl font-bold text-bk-slate">Bartosz Kaczmarczyk</h3><p class="text-bk-gold text-xs font-semibold uppercase tracking-wider mt-1">Prezes Zarządu Fundacji BK Capital</p></div>
+                            <div><h3 class="font-sans text-2xl font-bold text-bk-slate">Bartosz Kaczmarczyk</h3><p class="text-bk-blue text-xs font-semibold uppercase tracking-wider mt-1">Prezes Zarządu Fundacji BK Capital</p></div>
                             <p class="text-slate-600 text-sm leading-relaxed">Menedżer i doradca z ponad 30-letnim doświadczeniem w zarządzaniu przedsiębiorstwami, projektami i zespołami w Europie, Azji, Afryce oraz obu Amerykach. Doświadczenie zdobywał w ponad 50 krajach, realizując projekty w ponad 40 jurysdykcjach.</p>
                             <p class="text-slate-600 text-sm leading-relaxed">Specjalizuje się w strategii, restrukturyzacji, optymalizacji operacyjnej, fuzjach i przejęciach oraz ekspansji międzynarodowej. Założyciel BK Capital; zrealizował ponad 100 projektów dla firm prywatnych, inwestorów i instytucji publicznych.</p>
                             <p class="text-slate-600 text-sm leading-relaxed">W latach 2016–2019 przewodniczył radzie nadzorczej spółki notowanej na GPW, a w latach 2009–2011 był prezesem zarządu spółki notowanej na londyńskim rynku AIM.</p>
@@ -275,10 +276,10 @@ Total output lines: 1
                     </div>
                 </article>
                 <article class="luxury-card-light lg:col-span-4 p-8 rounded-3xl bg-slate-900 text-white space-y-4">
-                    <span class="text-xs font-extrabold uppercase tracking-widest text-amber-400">Przejrzystość Finansowa</span>
-                    <h3 class="font-serif text-xl font-bold text-white">Sprawozdawczość i Rejestry</h3>
+                    <span class="text-xs font-extrabold uppercase tracking-widest text-sky-300">Przejrzystość Finansowa</span>
+                    <h3 class="font-sans text-xl font-bold text-white">Sprawozdawczość i Rejestry</h3>
                     <p class="text-slate-300 text-xs leading-relaxed">Fundacja BK Capital realizuje obowiązki sprawozdawcze i publikuje jawne informacje o prowadzonej działalności statutowej w Krajowym Rejestrze Sądowym.</p>
-                    <button onclick="openModal('statut-modal')" class="px-5 py-2.5 bg-slate-800 hover:bg-slate-700 text-amber-400 font-bold text-xs rounded-xl border border-amber-500/30 transition-all">Pobierz / Zobacz Dokumentację Statutową</button>
+                    <button onclick="openModal('statut-modal')" class="px-5 py-2.5 bg-slate-800 hover:bg-slate-700 text-sky-300 font-bold text-xs rounded-xl border border-blue-500/30 transition-all">Pobierz / Zobacz Dokumentację Statutową</button>
                 </article>
             </div>
         </section>
@@ -286,40 +287,40 @@ Total output lines: 1
         <!-- WARTOŚCI I ZASADY -->
         <section id="misja" class="max-w-7xl mx-auto px-6 space-y-12">
             <div class="text-center max-w-3xl mx-auto space-y-4">
-                <span class="text-xs font-extrabold uppercase tracking-[0.3em] text-bk-gold">Fundament Działania</span>
-                <h2 class="font-serif text-3xl sm:text-5xl font-bold text-bk-slate">Zasady i Wartości Instytucjonalne</h2>
+                <span class="text-xs font-extrabold uppercase tracking-[0.3em] text-bk-blue">Fundament Działania</span>
+                <h2 class="font-sans text-3xl sm:text-5xl font-bold text-bk-slate">Zasady i Wartości Instytucjonalne</h2>
                 <p class="text-slate-600 text-sm">Praca naszej organizacji opiera się na czterech podstawowych filarach etycznych:</p>
             </div>
 
             <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
                 
-                <div class="p-8 rounded-3xl bg-white border border-slate-200 shadow-sm space-y-4 hover:border-amber-400 transition-colors">
+                <div class="p-8 rounded-3xl bg-white border border-slate-200 shadow-sm space-y-4 hover:border-sky-400 transition-colors">
                     <span class="text-3xl block">🛡️</span>
-                    <h3 class="font-serif text-lg font-bold text-bk-slate">Transparentność</h3>
+                    <h3 class="font-sans text-lg font-bold text-bk-slate">Transparentność</h3>
                     <p class="text-slate-600 text-xs leading-relaxed">
                         Prowadzimy jawną dokumentację statutową i rejestrową, opierając działalność na przepisach polskiego prawa.
                     </p>
                 </div>
 
-                <div class="p-8 rounded-3xl bg-white border border-slate-200 shadow-sm space-y-4 hover:border-amber-400 transition-colors">
+                <div class="p-8 rounded-3xl bg-white border border-slate-200 shadow-sm space-y-4 hover:border-sky-400 transition-colors">
                     <span class="text-3xl block">🤝</span>
-                    <h3 class="font-serif text-lg font-bold text-bk-slate">Równość i Integracja</h3>
+                    <h3 class="font-sans text-lg font-bold text-bk-slate">Równość i Integracja</h3>
                     <p class="text-slate-600 text-xs leading-relaxed">
                         Tworzymy bezstronne warunki do adaptacji społecznej dla obcokrajowców i grup zagrożonych wykluczeniem.
                     </p>
                 </div>
 
-                <div class="p-8 rounded-3xl bg-white border border-slate-200 shadow-sm space-y-4 hover:border-amber-400 transition-colors">
+                <div class="p-8 rounded-3xl bg-white border border-slate-200 shadow-sm space-y-4 hover:border-sky-400 transition-colors">
                     <span class="text-3xl block">💡</span>
-                    <h3 class="font-serif text-lg font-bold text-bk-slate">Rozwój i Edukacja</h3>
+                    <h3 class="font-sans text-lg font-bold text-bk-slate">Rozwój i Edukacja</h3>
                     <p class="text-slate-600 text-xs leading-relaxed">
                         Udostępniamy warsztaty podnoszące kwalifikacje rynkowe oraz bezpłatne kursy językowe.
                     </p>
                 </div>
 
-                <div class="p-8 rounded-3xl bg-white border border-slate-200 shadow-sm space-y-4 hover:border-amber-400 transition-colors">
+                <div class="p-8 rounded-3xl bg-white border border-slate-200 shadow-sm space-y-4 hover:border-sky-400 transition-colors">
                     <span class="text-3xl block">🏛️</span>
-                    <h3 class="font-serif text-lg font-bold text-bk-slate">Odpowiedzialność</h3>
+                    <h3 class="font-sans text-lg font-bold text-bk-slate">Odpowiedzialność</h3>
                     <p class="text-slate-600 text-xs leading-relaxed">
                         Dbamy o najwyższe standardy obsługi interesariuszy, budując długofalowe zaufanie społeczne.
                     </p>
@@ -331,24 +332,24 @@ Total output lines: 1
         <!-- SEKTORY DZIAŁALNOŚCI STATUTOWEJ -->
                 <section id="sektory" class="max-w-7xl mx-auto px-6 space-y-12">
             <div class="text-center max-w-3xl mx-auto space-y-4">
-                <span class="text-xs font-extrabold uppercase tracking-[0.3em] text-bk-gold">Nasze kompetencje</span>
-                <h2 class="font-serif text-3xl sm:text-5xl font-bold text-bk-slate">Wsparcie dla przedsiębiorstw</h2>
+                <span class="text-xs font-extrabold uppercase tracking-[0.3em] text-bk-blue">Nasze kompetencje</span>
+                <h2 class="font-sans text-3xl sm:text-5xl font-bold text-bk-slate">Wsparcie dla przedsiębiorstw</h2>
                 <p class="text-slate-600 text-sm">Doradztwo dopasowane do wyzwań związanych z rozwojem, zmianą i działalnością międzynarodową.</p>
             </div>
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <article class="luxury-card-light p-8 rounded-3xl flex flex-col gap-5"><span class="w-12 h-12 rounded-xl gold-gradient-bg text-white flex items-center justify-center font-bold text-lg">01</span><h3 class="font-serif text-xl font-bold text-bk-slate">Doradztwo gospodarcze</h3><p class="text-slate-600 text-sm leading-relaxed">Pomagamy analizować sytuację firmy, wyznaczać kierunki rozwoju i usprawniać działanie organizacji. Wspieramy zarządy w planowaniu strategii, projektów i zmian operacyjnych.</p></article>
-                <article class="luxury-card-light p-8 rounded-3xl flex flex-col gap-5"><span class="w-12 h-12 rounded-xl gold-gradient-bg text-white flex items-center justify-center font-bold text-lg">02</span><h3 class="font-serif text-xl font-bold text-bk-slate">Doradztwo w zakresie transgranicznej migracji pracowników</h3><p class="text-slate-600 text-sm leading-relaxed">Doradzamy w planowaniu i organizacji procesów związanych z międzynarodową mobilnością kadr. Pomagamy określić potrzeby, przygotować współpracę stron i zaplanować wsparcie pracowników w adaptacji.</p></article>
-                <article class="luxury-card-light p-8 rounded-3xl flex flex-col gap-5"><span class="w-12 h-12 rounded-xl gold-gradient-bg text-white flex items-center justify-center font-bold text-lg">03</span><h3 class="font-serif text-xl font-bold text-bk-slate">Restrukturyzacja przedsiębiorstw</h3><p class="text-slate-600 text-sm leading-relaxed">Wspieramy diagnozę wyzwań firmy, projektowanie zmian organizacyjnych i operacyjnych oraz wdrażanie działań ukierunkowanych na poprawę efektywności i trwały rozwój.</p></article>
+                <article class="luxury-card-light p-8 rounded-3xl flex flex-col gap-5"><span class="w-12 h-12 rounded-xl navy-gradient-bg text-white flex items-center justify-center font-bold text-lg">01</span><h3 class="font-sans text-xl font-bold text-bk-slate">Doradztwo gospodarcze</h3><p class="text-slate-600 text-sm leading-relaxed">Pomagamy analizować sytuację firmy, wyznaczać kierunki rozwoju i usprawniać działanie organizacji. Wspieramy zarządy w planowaniu strategii, projektów i zmian operacyjnych.</p></article>
+                <article class="luxury-card-light p-8 rounded-3xl flex flex-col gap-5"><span class="w-12 h-12 rounded-xl navy-gradient-bg text-white flex items-center justify-center font-bold text-lg">02</span><h3 class="font-sans text-xl font-bold text-bk-slate">Doradztwo w zakresie transgranicznej migracji pracowników</h3><p class="text-slate-600 text-sm leading-relaxed">Doradzamy w planowaniu i organizacji procesów związanych z międzynarodową mobilnością kadr. Pomagamy określić potrzeby, przygotować współpracę stron i zaplanować wsparcie pracowników w adaptacji.</p></article>
+                <article class="luxury-card-light p-8 rounded-3xl flex flex-col gap-5"><span class="w-12 h-12 rounded-xl navy-gradient-bg text-white flex items-center justify-center font-bold text-lg">03</span><h3 class="font-sans text-xl font-bold text-bk-slate">Restrukturyzacja przedsiębiorstw</h3><p class="text-slate-600 text-sm leading-relaxed">Wspieramy diagnozę wyzwań firmy, projektowanie zmian organizacyjnych i operacyjnych oraz wdrażanie działań ukierunkowanych na poprawę efektywności i trwały rozwój.</p></article>
             </div>
         </section>
 
         <!-- SEKCJA BAZY WIEDZY & SEO ARTICLES -->
                 <section id="baza-wiedzy" class="max-w-7xl mx-auto px-6 space-y-8">
-            <div class="text-center max-w-3xl mx-auto space-y-3"><span class="text-xs font-extrabold uppercase tracking-[0.3em] text-bk-gold">Jak możemy pomóc</span><h2 class="font-serif text-3xl sm:text-4xl font-bold text-bk-slate">Praktyczne wsparcie w zmianie</h2><p class="text-slate-600 text-sm">Pracujemy z organizacjami na różnych etapach rozwoju — od planowania kierunku działania po wdrażanie złożonych zmian.</p></div>
+            <div class="text-center max-w-3xl mx-auto space-y-3"><span class="text-xs font-extrabold uppercase tracking-[0.3em] text-bk-blue">Jak możemy pomóc</span><h2 class="font-sans text-3xl sm:text-4xl font-bold text-bk-slate">Praktyczne wsparcie w zmianie</h2><p class="text-slate-600 text-sm">Pracujemy z organizacjami na różnych etapach rozwoju — od planowania kierunku działania po wdrażanie złożonych zmian.</p></div>
             <div class="grid md:grid-cols-3 gap-6">
-                <article class="luxury-card-light p-6 rounded-3xl space-y-3"><span class="text-[10px] font-bold uppercase tracking-wider text-amber-600 bg-amber-50 px-2.5 py-1 rounded-md inline-block">Strategia</span><h3 class="font-bold text-bk-slate text-base leading-snug">Rozwój i doradztwo gospodarcze</h3><p class="text-slate-600 text-xs leading-relaxed">Analiza wyzwań firmy, planowanie rozwoju i usprawnianie procesów operacyjnych.</p></article>
-                <article class="luxury-card-light p-6 rounded-3xl space-y-3"><span class="text-[10px] font-bold uppercase tracking-wider text-amber-600 bg-amber-50 px-2.5 py-1 rounded-md inline-block">Mobilność międzynarodowa</span><h3 class="font-bold text-bk-slate text-base leading-snug">Transgraniczna migracja pracowników</h3><p class="text-slate-600 text-xs leading-relaxed">Planowanie procesów współpracy i adaptacji w związku z międzynarodową mobilnością kadr.</p></article>
-                <article class="luxury-card-light p-6 rounded-3xl space-y-3"><span class="text-[10px] font-bold uppercase tracking-wider text-amber-600 bg-amber-50 px-2.5 py-1 rounded-md inline-block">Transformacja</span><h3 class="font-bold text-bk-slate text-base leading-snug">Restrukturyzacja przedsiębiorstw</h3><p class="text-slate-600 text-xs leading-relaxed">Przygotowanie zmian organizacyjnych i operacyjnych oraz wsparcie ich realizacji.</p></article>
+                <article class="luxury-card-light p-6 rounded-3xl space-y-3"><span class="text-[10px] font-bold uppercase tracking-wider text-blue-800 bg-blue-50 px-2.5 py-1 rounded-md inline-block">Strategia</span><h3 class="font-bold text-bk-slate text-base leading-snug">Rozwój i doradztwo gospodarcze</h3><p class="text-slate-600 text-xs leading-relaxed">Analiza wyzwań firmy, planowanie rozwoju i usprawnianie procesów operacyjnych.</p></article>
+                <article class="luxury-card-light p-6 rounded-3xl space-y-3"><span class="text-[10px] font-bold uppercase tracking-wider text-blue-800 bg-blue-50 px-2.5 py-1 rounded-md inline-block">Mobilność międzynarodowa</span><h3 class="font-bold text-bk-slate text-base leading-snug">Transgraniczna migracja pracowników</h3><p class="text-slate-600 text-xs leading-relaxed">Planowanie procesów współpracy i adaptacji w związku z międzynarodową mobilnością kadr.</p></article>
+                <article class="luxury-card-light p-6 rounded-3xl space-y-3"><span class="text-[10px] font-bold uppercase tracking-wider text-blue-800 bg-blue-50 px-2.5 py-1 rounded-md inline-block">Transformacja</span><h3 class="font-bold text-bk-slate text-base leading-snug">Restrukturyzacja przedsiębiorstw</h3><p class="text-slate-600 text-xs leading-relaxed">Przygotowanie zmian organizacyjnych i operacyjnych oraz wsparcie ich realizacji.</p></article>
             </div>
         </section>
 
@@ -360,8 +361,8 @@ Total output lines: 1
                     <!-- FORMULARZ KONTAKTOWY PODŁĄCZONY POD FORMSPREE -->
                     <div class="lg:col-span-7 p-8 sm:p-14 space-y-8 bg-white">
                         <div>
-                            <span class="text-xs font-extrabold uppercase tracking-[0.3em] text-bk-gold">Kontakt Oficjalny</span>
-                            <h2 class="font-serif text-3xl font-bold text-bk-slate mt-1">Skontaktuj się z Fundacją</h2>
+                            <span class="text-xs font-extrabold uppercase tracking-[0.3em] text-bk-blue">Kontakt Oficjalny</span>
+                            <h2 class="font-sans text-3xl font-bold text-bk-slate mt-1">Skontaktuj się z Fundacją</h2>
                             <p class="text-slate-500 text-xs mt-2">Prześlij wiadomość – sekretariat odpowie tak szybko, jak to możliwe.</p>
                         </div>
 
@@ -369,17 +370,17 @@ Total output lines: 1
                             <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
                                 <div>
                                     <label class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-2">Imię i Nazwisko:</label>
-                                    <input type="text" name="name" required placeholder="np. Jan Kowalski" class="w-full p-3.5 bg-slate-50 border border-slate-200 rounded-xl text-xs text-bk-slate focus:outline-none focus:border-bk-gold">
+                                    <input type="text" name="name" required placeholder="np. Jan Kowalski" class="w-full p-3.5 bg-slate-50 border border-slate-200 rounded-xl text-xs text-bk-slate focus:outline-none focus:border-bk-blue">
                                 </div>
                                 <div>
                                     <label class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-2">Telefon lub E-mail:</label>
-                                    <input type="text" name="reply_to" required placeholder="Dane do kontaktu" class="w-full p-3.5 bg-slate-50 border border-slate-200 rounded-xl text-xs text-bk-slate focus:outline-none focus:border-bk-gold">
+                                    <input type="text" name="reply_to" required placeholder="Dane do kontaktu" class="w-full p-3.5 bg-slate-50 border border-slate-200 rounded-xl text-xs text-bk-slate focus:outline-none focus:border-bk-blue">
                                 </div>
                             </div>
 
                             <div>
                                 <label class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-2">Wybrany Sektor Działalności:</label>
-                                <select name="sector" id="sektor-select" class="w-full p-3.5 bg-slate-50 border border-slate-200 rounded-xl text-xs text-bk-slate focus:outline-none focus:border-bk-gold">
+                                <select name="sector" id="sektor-select" class="w-full p-3.5 bg-slate-50 border border-slate-200 rounded-xl text-xs text-bk-slate focus:outline-none focus:border-bk-blue">
                                     <option>Doradztwo gospodarcze</option>
                                     <option>Doradztwo w zakresie transgranicznej migracji pracowników</option>
                                     <option>Restrukturyzacja przedsiębiorstw</option>
@@ -389,28 +390,28 @@ Total output lines: 1
 
                             <div>
                                 <label class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-2">Treść wiadomości:</label>
-                                <textarea name="message" rows="4" required placeholder="Napisz w czym możemy Ci pomóc..." class="w-full p-3.5 bg-slate-50 border border-slate-200 rounded-xl text-xs text-bk-slate focus:outline-none focus:border-bk-gold"></textarea>
+                                <textarea name="message" rows="4" required placeholder="Napisz w czym możemy Ci pomóc..." class="w-full p-3.5 bg-slate-50 border border-slate-200 rounded-xl text-xs text-bk-slate focus:outline-none focus:border-bk-blue"></textarea>
                             </div>
 
-                            <button type="submit" class="w-full py-4 gold-gradient-bg text-white font-extrabold text-xs uppercase tracking-widest rounded-xl transition-all shadow-md hover:brightness-110">
+                            <button type="submit" class="w-full py-4 navy-gradient-bg text-white font-extrabold text-xs uppercase tracking-widest rounded-xl transition-all shadow-md hover:brightness-110">
                                 Wyślij Wiadomość
                             </button>
-                            <p class="text-[10px] leading-relaxed text-slate-500">Dane z formularza wykorzystamy do odpowiedzi na wiadomość. Szczegóły przetwarzania opisuje <a href="polityka-prywatnosci.html" class="text-amber-700 underline font-semibold">informacja RODO</a>.</p>
+                            <p class="text-[10px] leading-relaxed text-slate-500">Dane z formularza wykorzystamy do odpowiedzi na wiadomość. Szczegóły przetwarzania opisuje <a href="polityka-prywatnosci.html" class="text-blue-800 underline font-semibold">informacja RODO</a>.</p>
                         </form>
                     </div>
 
                     <!-- METRYKA PAŃSTWOWA Z MAPĄ GOOGLE -->
                     <div class="lg:col-span-5 p-8 sm:p-14 bg-bk-slate text-white border-t lg:border-t-0 lg:border-l border-slate-800 flex flex-col justify-between space-y-6">
                         <div>
-                            <span class="text-xs font-extrabold uppercase tracking-widest text-amber-400">Dane Rejestrowe i Siedziba</span>
-                            <h3 class="font-serif text-2xl font-bold text-white mt-2">Fundacja BK Capital</h3>
+                            <span class="text-xs font-extrabold uppercase tracking-widest text-sky-300">Dane Rejestrowe i Siedziba</span>
+                            <h3 class="font-sans text-2xl font-bold text-white mt-2">Fundacja BK Capital</h3>
                             <p class="text-slate-300 text-xs mt-1">ul. Celna 13/17, 30-507 Kraków</p>
                         </div>
 
                         <div class="space-y-3 text-xs">
                             <div class="p-3.5 rounded-xl bg-slate-800/80 border border-slate-700">
                                 <span class="text-slate-400 block mb-0.5">Infolinia Kontaktowa:</span>
-                                <a href="tel:+48664901126" class="text-amber-400 font-bold text-sm">+48 664 901 126</a>
+                                <a href="tel:+48664901126" class="text-sky-300 font-bold text-sm">+48 664 901 126</a>
                             </div>
                             <div class="p-3.5 rounded-xl bg-slate-800/80 border border-slate-700">
                                 <span class="text-slate-400 block mb-0.5">Poczta Elektroniczna:</span>
@@ -443,7 +444,7 @@ Total output lines: 1
                             <div class="w-full h-44 rounded-2xl overflow-hidden border border-slate-700 shadow-md">
                                 <div id="map-placeholder" class="h-full flex flex-col items-center justify-center gap-3 bg-slate-800 px-5 text-center text-slate-300">
                                     <span class="text-sm font-semibold">Mapa Google jest opcjonalna</span>
-                                    <button type="button" onclick="acceptCookies()" class="rounded-lg bg-amber-600 px-4 py-2 text-xs font-bold text-white hover:bg-amber-700">Załaduj mapę po akceptacji</button>
+                                    <button type="button" onclick="acceptCookies()" class="rounded-lg bg-blue-800 px-4 py-2 text-xs font-bold text-white hover:bg-blue-900">Załaduj mapę po akceptacji</button>
                                 </div>
                                 <iframe id="google-map" title="Mapa z lokalizacją Fundacji BK Capital" data-src="https://maps.google.com/maps?q=ul.%20Celna%2013/17,%2030-507%20Krak%C3%B3w&t=&z=15&ie=UTF8&iwloc=&output=embed" src="about:blank" class="hidden w-full h-full" style="border:0;" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                             </div>
@@ -465,8 +466,8 @@ Total output lines: 1
             <div id="faq" class="space-y-6 pb-12 border-b border-slate-200">
                 <div class="flex flex-col md:flex-row justify-between items-start md:items-end gap-2">
                     <div>
-                        <span class="text-xs font-extrabold uppercase tracking-[0.3em] text-bk-gold block mb-1">Informator Merytoryczny</span>
-                        <h2 class="font-serif text-2xl font-bold text-bk-slate">Najczęściej Zadawane Pytania (FAQ)</h2>
+                        <span class="text-xs font-extrabold uppercase tracking-[0.3em] text-bk-blue block mb-1">Informator Merytoryczny</span>
+                        <h2 class="font-sans text-2xl font-bold text-bk-slate">Najczęściej Zadawane Pytania (FAQ)</h2>
                     </div>
                     <p class="text-slate-500 text-xs">Szybkie odpowiedzi na kluczowe pytania dotyczące Fundacji</p>
                 </div>
@@ -509,10 +510,10 @@ Total output lines: 1
                 </div>
                 <div class="flex flex-wrap justify-center gap-6 text-slate-600 font-semibold">
                     
-                    <button onclick="openModal('statut-modal')" class="hover:text-bk-gold transition-colors">Statut Fundacji</button>
-                    <a href="polityka-prywatnosci.html" class="hover:text-bk-gold transition-colors">Polityka Prywatności</a>
-                    <a href="polityka-cookies.html" class="hover:text-bk-gold transition-colors">Polityka Cookies</a>
-                    <button onclick="showCookieBanner()" class="hover:text-bk-gold transition-colors">Ustawienia Cookies</button>
+                    <button onclick="openModal('statut-modal')" class="hover:text-bk-blue transition-colors">Statut Fundacji</button>
+                    <a href="polityka-prywatnosci.html" class="hover:text-bk-blue transition-colors">Polityka Prywatności</a>
+                    <a href="polityka-cookies.html" class="hover:text-bk-blue transition-colors">Polityka Cookies</a>
+                    <button onclick="showCookieBanner()" class="hover:text-bk-blue transition-colors">Ustawienia Cookies</button>
                 </div>
             </div>
 
@@ -526,17 +527,17 @@ Total output lines: 1
 
     <!-- PŁYWAJĄCY PRZYCISK KONTAKTOWY (FLOATING ACTION BUTTON) -->
     <div class="fixed bottom-6 right-6 z-40">
-        <button onclick="openModal('top-contact-modal')" class="w-14 h-14 rounded-full gold-gradient-bg text-white font-bold text-2xl flex items-center justify-center shadow-2xl hover:scale-110 transition-transform focus:outline-none" aria-label="Szybki kontakt">
+        <button onclick="openModal('top-contact-modal')" class="w-14 h-14 rounded-full navy-gradient-bg text-white font-bold text-2xl flex items-center justify-center shadow-2xl hover:scale-110 transition-transform focus:outline-none" aria-label="Szybki kontakt">
             💬
         </button>
     </div>
 
     <!-- WYBÓR COOKIES -->
     <div id="cookie-banner" role="dialog" aria-label="Wybór plików cookies" aria-describedby="cookie-message" class="fixed bottom-3 left-3 right-3 sm:left-6 sm:right-auto sm:max-w-lg max-h-[75vh] overflow-y-auto bg-bk-slate text-white p-4 sm:p-5 rounded-2xl shadow-2xl border border-slate-700 z-50 hidden">
-        <p id="cookie-message" class="text-xs sm:text-sm text-slate-200 leading-relaxed">Mapa Google jest opcjonalna i załaduje się dopiero po akceptacji. Strona nie uruchamia narzędzi analitycznych ani reklamowych. <a href="polityka-cookies.html" class="text-amber-300 underline">Polityka cookies</a> · <a href="polityka-prywatnosci.html" class="text-amber-300 underline">RODO i prywatność</a>.</p>
+        <p id="cookie-message" class="text-xs sm:text-sm text-slate-200 leading-relaxed">Mapa Google jest opcjonalna i załaduje się dopiero po akceptacji. Strona nie uruchamia narzędzi analitycznych ani reklamowych. <a href="polityka-cookies.html" class="text-sky-300 underline">Polityka cookies</a> · <a href="polityka-prywatnosci.html" class="text-sky-300 underline">RODO i prywatność</a>.</p>
         <div class="flex flex-col sm:flex-row sm:justify-end gap-2 mt-4">
             <button type="button" onclick="rejectCookies()" class="px-4 py-2.5 rounded-xl border border-slate-500 text-slate-100 text-xs font-bold">Tylko niezbędne</button>
-            <button type="button" onclick="acceptCookies()" class="px-4 py-2.5 rounded-xl gold-gradient-bg text-white text-xs font-bold">Akceptuję cookies opcjonalne</button>
+            <button type="button" onclick="acceptCookies()" class="px-4 py-2.5 rounded-xl navy-gradient-bg text-white text-xs font-bold">Akceptuję cookies opcjonalne</button>
         </div>
     </div>
 
@@ -545,17 +546,17 @@ Total output lines: 1
         <div class="bg-white rounded-3xl max-w-sm w-full p-6 space-y-5 shadow-2xl border border-slate-200 text-center relative">
             <button onclick="closeModal('top-contact-modal')" class="absolute top-4 right-4 text-slate-400 hover:text-slate-700 text-2xl leading-none">&times;</button>
             
-            <div class="w-12 h-12 gold-gradient-bg text-white rounded-2xl flex items-center justify-center font-bold text-xl mx-auto shadow-md">
+            <div class="w-12 h-12 navy-gradient-bg text-white rounded-2xl flex items-center justify-center font-bold text-xl mx-auto shadow-md">
                 💬
             </div>
             
             <div>
-                <h3 class="font-serif font-bold text-bk-slate text-lg">Szybki Kontakt</h3>
+                <h3 class="font-sans font-bold text-bk-slate text-lg">Szybki Kontakt</h3>
                 <p class="text-slate-500 text-xs mt-1">Wybierz dogodną dla Ciebie formę kontaktu z sekretariatem Fundacji:</p>
             </div>
 
             <div class="space-y-3 pt-2">
-                <a href="tel:+48664901126" class="w-full py-3.5 px-4 bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-xs uppercase tracking-wider rounded-xl transition-all shadow-md flex items-center justify-center gap-2">
+                <a href="tel:+48664901126" class="w-full py-3.5 px-4 bg-blue-800 hover:bg-blue-900 text-white font-bold text-xs uppercase tracking-wider rounded-xl transition-all shadow-md flex items-center justify-center gap-2">
                     <span>📞 Zadzwoń: +48 664 901 126</span>
                 </a>
                 <a href="mailto:kontakt@fundacjabkcapital.pl" class="w-full py-3.5 px-4 bg-bk-slate hover:bg-slate-800 text-white font-bold text-xs uppercase tracking-wider rounded-xl transition-all shadow-md flex items-center justify-center gap-2">
@@ -573,7 +574,7 @@ Total output lines: 1
     <div id="statut-modal" class="fixed inset-0 z-50 bg-slate-900/60 backdrop-blur-md hidden items-center justify-center p-4">
         <div class="bg-white rounded-3xl max-w-2xl w-full max-h-[85vh] flex flex-col overflow-hidden border border-slate-200 shadow-2xl">
             <div class="p-6 bg-bk-slate text-white flex justify-between items-center">
-                <h3 class="font-serif font-bold text-base">Statut Fundacji BK Capital</h3>
+                <h3 class="font-sans font-bold text-base">Statut Fundacji BK Capital</h3>
                 <button onclick="closeModal('statut-modal')" class="text-slate-400 hover:text-white text-2xl leading-none">&times;</button>
             </div>
             <div class="p-6 overflow-y-auto text-xs text-slate-600 space-y-4 leading-relaxed">
@@ -581,7 +582,7 @@ Total output lines: 1
                 <p><strong>Rozdział II:</strong> Cele Fundacji obejmują wspieranie przedsiębiorczości, doradztwo gospodarcze, rozwój współpracy międzynarodowej oraz wspieranie organizacji w procesach zmian i restrukturyzacji.</p>
             </div>
             <div class="p-4 bg-slate-50 border-t border-slate-200 flex justify-end">
-                <button onclick="closeModal('statut-modal')" class="px-6 py-2.5 gold-gradient-bg text-white font-extrabold text-xs rounded-xl">Zamknij</button>
+                <button onclick="closeModal('statut-modal')" class="px-6 py-2.5 navy-gradient-bg text-white font-extrabold text-xs rounded-xl">Zamknij</button>
             </div>
         </div>
     </div>
@@ -594,7 +595,7 @@ Total output lines: 1
                 <button onclick="closeModal('rodo-modal')" class="text-slate-400 hover:text-white text-2xl leading-none">&times;</button>
             </div>
             <div class="p-6 overflow-y-auto text-xs text-slate-600 space-y-3 leading-relaxed">
-                <p>Administratorem danych osobowych jest <strong>Fundacja BK Capital</strong> z siedzibą przy ul. Celnej 13/17, 30-507 Kraków, KRS: <span class="krs-value">0000861638</span>. W sprawach prywatności napisz na <a href="mailto:kontakt@fundacjabkcapital.pl" class="text-bk-gold font-bold underline">kontakt@fundacjabkcapital.pl</a>. Informacje o celach, podstawach, prawach i sposobie kontaktu znajdują się w <a href="polityka-prywatnosci.html" class="text-bk-gold font-bold underline">polityce prywatności i informacji RODO</a>.</p>
+                <p>Administratorem danych osobowych jest <strong>Fundacja BK Capital</strong> z siedzibą przy ul. Celnej 13/17, 30-507 Kraków, KRS: <span class="krs-value">0000861638</span>. W sprawach prywatności napisz na <a href="mailto:kontakt@fundacjabkcapital.pl" class="text-bk-blue font-bold underline">kontakt@fundacjabkcapital.pl</a>. Informacje o celach, podstawach, prawach i sposobie kontaktu znajdują się w <a href="polityka-prywatnosci.html" class="text-bk-blue font-bold underline">polityce prywatności i informacji RODO</a>.</p>
             </div>
             <div class="p-4 bg-slate-50 border-t border-slate-200 flex justify-end">
                 <button onclick="closeModal('rodo-modal')" class="px-6 py-2.5 bg-slate-800 text-white font-bold text-xs rounded-xl">Zamknij</button>
@@ -610,7 +611,7 @@ Total output lines: 1
                 <button onclick="closeModal('cookies-modal')" class="text-slate-400 hover:text-white text-2xl leading-none">&times;</button>
             </div>
             <div class="p-6 overflow-y-auto text-xs text-slate-600 space-y-3 leading-relaxed">
-                <p>Strona nie uruchamia obecnie narzędzi analitycznych ani reklamowych. Mapa Google jest opcjonalna i jest pobierana dopiero po akceptacji cookies opcjonalnych. Wybór zamyka komunikat do odświeżenia strony i nie jest zapisywany w pamięci lokalnej ani trwałych cookies. Pełne informacje zawiera <a href="polityka-cookies.html" class="text-bk-gold font-bold underline">polityka plików cookies</a>.</p>
+                <p>Strona nie uruchamia obecnie narzędzi analitycznych ani reklamowych. Mapa Google jest opcjonalna i jest pobierana dopiero po akceptacji cookies opcjonalnych. Wybór zamyka komunikat do odświeżenia strony i nie jest zapisywany w pamięci lokalnej ani trwałych cookies. Pełne informacje zawiera <a href="polityka-cookies.html" class="text-bk-blue font-bold underline">polityka plików cookies</a>.</p>
             </div>
             <div class="p-4 bg-slate-50 border-t border-slate-200 flex justify-end">
                 <button onclick="closeModal('cookies-modal')" class="px-6 py-2.5 bg-slate-800 text-white font-bold text-xs rounded-xl">Zamknij</button>
