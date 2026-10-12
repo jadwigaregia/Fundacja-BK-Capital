@@ -18,14 +18,14 @@
                         'bk-card': '#ffffff',
                         'bk-slate': '#0f172a',
                         'bk-navy': '#1e293b',
-                        'bk-blue': '#2563eb',
-                        'bk-gold': '#d97706',
-                        'bk-gold-hover': '#b45309',
-                        'bk-gold-light': '#fef3c7',
+                        'bk-blue': '#244768',
+                        'bk-gold': '#244768',
+                        'bk-gold-hover': '#17324f',
+                        'bk-gold-light': '#edf3f8',
                         'bk-border': '#e2e8f0',
                     },
                     fontFamily: {
-                        serif: ['Playfair Display', 'Georgia', 'serif'],
+                        serif: ['Plus Jakarta Sans', 'system-ui', 'sans-serif'],
                         sans: ['Plus Jakarta Sans', 'system-ui', 'sans-serif'],
                     }
                 }
@@ -36,7 +36,7 @@
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;0,900;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
     <style>
         body { 
@@ -44,13 +44,13 @@
             background-color: #f8fafc; 
             color: #0f172a; 
         }
-        .gold-gradient-text {
-            background: linear-gradient(135deg, #b45309 0%, #d97706 50%, #f59e0b 100%);
+        .navy-gradient-text {
+            background: linear-gradient(135deg, #17324f 0%, #244768 50%, #7895af 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
-        .gold-gradient-bg {
-            background: linear-gradient(135deg, #d97706 0%, #b45309 100%);
+        .navy-gradient-bg {
+            background: linear-gradient(135deg, #244768 0%, #17324f 100%);
         }
         .glass-nav-light {
             background: rgba(255, 255, 255, 0.92);
@@ -59,14 +59,14 @@
         }
     </style>
 </head>
-<body class="min-h-screen flex flex-col antialiased selection:bg-bk-gold selection:text-white relative">
+<body class="min-h-screen flex flex-col antialiased selection:bg-bk-blue selection:text-white relative">
 
     <!-- PASEK REJESTROWY TOP -->
     <div class="bg-bk-slate text-slate-200 text-[11px] py-2.5 px-6 border-b border-slate-800">
         <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-2">
             <div class="flex flex-wrap items-center justify-center md:justify-start gap-4">
-                <span class="flex items-center gap-1.5 font-bold text-amber-400 uppercase tracking-widest text-[10px]">
-                    <span class="w-2 h-2 rounded-full bg-amber-400 animate-pulse"></span>
+                <span class="flex items-center gap-1.5 font-bold text-sky-300 uppercase tracking-widest text-[10px]">
+                    <span class="w-2 h-2 rounded-full bg-sky-300 animate-pulse"></span>
                     KRS: 0000861638 &bull; NIP: 6793206112 &bull; REGON: 387222545
                 </span>
                 <span class="hidden lg:inline text-slate-600">|</span>
@@ -79,14 +79,14 @@
     <header class="sticky top-0 z-50 glass-nav-light border-b border-slate-200">
         <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
             <a href="index.html" class="flex items-center gap-3.5 group" aria-label="Strona główna Fundacji BK Capital">
-                <div class="w-11 h-11 rounded-xl bg-gradient-to-br from-amber-500 to-amber-700 p-0.5 shadow-md shadow-amber-500/20 group-hover:scale-105 transition-transform">
-                    <div class="w-full h-full bg-bk-slate rounded-[10px] flex items-center justify-center font-serif font-black text-xl text-amber-400">
+                <div class="w-11 h-11 rounded-xl bg-gradient-to-br from-blue-800 to-blue-900 p-0.5 shadow-md shadow-blue-900/15 group-hover:scale-105 transition-transform">
+                    <div class="w-full h-full bg-bk-slate rounded-[10px] flex items-center justify-center font-sans font-black text-xl text-sky-300">
                         BK
                     </div>
                 </div>
                 <div class="flex flex-col">
-                    <span class="font-serif text-2xl font-bold tracking-tight text-bk-slate leading-none">BK CAPITAL</span>
-                    <span class="text-[9px] font-extrabold tracking-[0.3em] text-bk-gold uppercase mt-1">FUNDACJA KRAKÓW</span>
+                    <span class="font-sans text-2xl font-bold tracking-tight text-bk-slate leading-none">BK CAPITAL</span>
+                    <span class="text-[9px] font-extrabold tracking-[0.3em] text-bk-blue uppercase mt-1">FUNDACJA KRAKÓW</span>
                 </div>
             </a>
 
@@ -101,19 +101,19 @@
         <div class="max-w-4xl mx-auto bg-white p-8 sm:p-14 rounded-3xl border border-slate-200 shadow-xl space-y-8">
             
             <div class="border-b border-slate-200 pb-6 space-y-2">
-                <span class="text-xs font-extrabold uppercase tracking-[0.3em] text-bk-gold block">Dokument Formalny</span>
-                <h1 class="font-serif text-3xl sm:text-4xl font-bold text-bk-slate">Informacja RODO i Polityka Prywatności</h1>
+                <span class="text-xs font-extrabold uppercase tracking-[0.3em] text-bk-blue block">Dokument Formalny</span>
+                <h1 class="font-sans text-3xl sm:text-4xl font-bold text-bk-slate">Informacja RODO i Polityka Prywatności</h1>
                 <p class="text-slate-500 text-xs">Ostatnia aktualizacja: 12 października 2026 r.</p>
             </div>
 
             <div class="space-y-6 text-slate-600 text-xs sm:text-sm leading-relaxed">
                 <section class="space-y-2">
-                    <h2 class="font-serif text-lg font-bold text-bk-slate">1. Administrator danych</h2>
+                    <h2 class="font-sans text-lg font-bold text-bk-slate">1. Administrator danych</h2>
                     <p>Administratorem Twoich danych osobowych jest <strong>Fundacja BK Capital</strong> z siedzibą przy ul. Celnej 13/17, 30-507 Kraków, wpisana do Krajowego Rejestru Sądowego pod numerem <strong>KRS: 0000861638</strong>, NIP: 6793206112, REGON: 387222545.</p>
-                    <p>Kontakt w sprawach danych osobowych: <a href="mailto:kontakt@fundacjabkcapital.pl" class="text-bk-gold font-bold hover:underline">kontakt@fundacjabkcapital.pl</a>, tel. <a href="tel:+48664901126" class="text-bk-gold font-bold hover:underline">+48 664 901 126</a>.</p>
+                    <p>Kontakt w sprawach danych osobowych: <a href="mailto:kontakt@fundacjabkcapital.pl" class="text-bk-blue font-bold hover:underline">kontakt@fundacjabkcapital.pl</a>, tel. <a href="tel:+48664901126" class="text-bk-blue font-bold hover:underline">+48 664 901 126</a>.</p>
                 </section>
                 <section class="space-y-2">
-                    <h2 class="font-serif text-lg font-bold text-bk-slate">2. Cele, podstawy i okres przetwarzania</h2>
+                    <h2 class="font-sans text-lg font-bold text-bk-slate">2. Cele, podstawy i okres przetwarzania</h2>
                     <ul class="list-disc pl-5 space-y-2">
                         <li><strong>Odpowiedź na wiadomość i prowadzenie korespondencji:</strong> dane podane w formularzu, e-mailu lub podczas rozmowy przetwarzamy w celu obsługi zapytania. Podstawą jest nasz prawnie uzasadniony interes polegający na prowadzeniu korespondencji i udzieleniu odpowiedzi (art. 6 ust. 1 lit. f RODO). Dane przechowujemy przez czas potrzebny do obsługi sprawy, a następnie do upływu okresu przedawnienia ewentualnych roszczeń.</li>
                         <li><strong>Obowiązki prawne:</strong> jeżeli kontakt prowadzi do powstania obowiązków wynikających z przepisów, dane przetwarzamy w zakresie i przez czas wymagany prawem (art. 6 ust. 1 lit. c RODO).</li>
@@ -121,33 +121,33 @@
                     </ul>
                 </section>
                 <section class="space-y-2">
-                    <h2 class="font-serif text-lg font-bold text-bk-slate">3. Odbiorcy danych</h2>
+                    <h2 class="font-sans text-lg font-bold text-bk-slate">3. Odbiorcy danych</h2>
                     <p>Dane mogą być udostępniane upoważnionym osobom działającym na rzecz Fundacji oraz dostawcom usług niezbędnych do obsługi strony i korespondencji, w szczególności usług IT, poczty elektronicznej, hostingu oraz formularza kontaktowego Formspree. Dostawcy przetwarzają dane w zakresie potrzebnym do świadczenia usług i na warunkach opisanych w ich dokumentacji. Dane nie są sprzedawane.</p>
                 </section>
                 <section class="space-y-2">
-                    <h2 class="font-serif text-lg font-bold text-bk-slate">4. Przekazywanie danych poza EOG</h2>
+                    <h2 class="font-sans text-lg font-bold text-bk-slate">4. Przekazywanie danych poza EOG</h2>
                     <p>Korzystanie z usług zewnętrznych dostawców, takich jak Formspree lub Google po załadowaniu mapy, może wiązać się z przekazaniem danych technicznych, a w przypadku formularza także jego treści, poza Europejski Obszar Gospodarczy. Takie przekazanie odbywa się na zasadach i z zastosowaniem zabezpieczeń określonych przez danego dostawcę. Szczegóły znajdują się w dokumentacji prywatności tych usług.</p>
                 </section>
                 <section class="space-y-2">
-                    <h2 class="font-serif text-lg font-bold text-bk-slate">5. Prawa osób, których dane dotyczą</h2>
+                    <h2 class="font-sans text-lg font-bold text-bk-slate">5. Prawa osób, których dane dotyczą</h2>
                     <p>Masz prawo żądać dostępu do danych, ich sprostowania, usunięcia lub ograniczenia przetwarzania, a także wnieść sprzeciw wobec przetwarzania opartego na prawnie uzasadnionym interesie. W przypadkach przewidzianych prawem możesz również zażądać przeniesienia danych. W celu realizacji praw napisz na adres e-mail wskazany powyżej.</p>
                     <p>Przysługuje Ci prawo wniesienia skargi do Prezesa Urzędu Ochrony Danych Osobowych. Podanie danych jest dobrowolne, ale może być konieczne, abyśmy mogli odpowiedzieć na wiadomość.</p>
                 </section>
                 <section class="space-y-2">
-                    <h2 class="font-serif text-lg font-bold text-bk-slate">6. Zautomatyzowane decyzje</h2>
+                    <h2 class="font-sans text-lg font-bold text-bk-slate">6. Zautomatyzowane decyzje</h2>
                     <p>Dane przekazane Fundacji nie są wykorzystywane do podejmowania decyzji opartych wyłącznie na zautomatyzowanym przetwarzaniu, w tym do profilowania wywołującego skutki prawne lub podobnie istotnie wpływającego na użytkownika.</p>
                 </section>
                 <section class="space-y-2">
-                    <h2 class="font-serif text-lg font-bold text-bk-slate">7. Pliki cookies i mapa</h2>
+                    <h2 class="font-sans text-lg font-bold text-bk-slate">7. Pliki cookies i mapa</h2>
                     <p>Strona nie uruchamia obecnie narzędzi analitycznych ani reklamowych. Opcjonalna mapa Google jest ładowana dopiero po jej zaakceptowaniu w komunikacie cookies. Wybór zamyka komunikat do czasu odświeżenia lub ponownego otwarcia strony i nie jest zapisywany w trwałym pliku cookie ani pamięci lokalnej przeglądarki.</p>
-                    <p>Szczegóły dotyczące cookies i usług zewnętrznych opisuje <a href="polityka-cookies.html" class="text-bk-gold font-bold hover:underline">polityka plików cookies</a>.</p>
+                    <p>Szczegóły dotyczące cookies i usług zewnętrznych opisuje <a href="polityka-cookies.html" class="text-bk-blue font-bold hover:underline">polityka plików cookies</a>.</p>
                 </section>
             </div>
         </div>
 
             <div class="pt-6 border-t border-slate-200 flex justify-between items-center text-xs text-slate-500">
                 <p>&copy; 2026 Fundacja BK Capital. Wszystkie prawa zastrzeżone.</p>
-                <a href="index.html" class="text-bk-gold font-bold hover:underline">Strona Główna &rarr;</a>
+                <a href="index.html" class="text-bk-blue font-bold hover:underline">Strona Główna &rarr;</a>
             </div>
 
         </div>
@@ -156,8 +156,8 @@
     <!-- FOOTER -->
     <footer class="bg-white border-t border-slate-200 py-8 text-xs text-slate-600">
         <div class="max-w-7xl mx-auto px-6 text-center space-y-2">
-            <p class="font-serif font-bold text-bk-slate text-sm">Fundacja BK Capital</p>
-            <p>ul. Celna 13/17, 30-507 Kraków &bull; KRS: 0000861638 &bull; NIP: 6793206112 &bull; REGON: 387222545</p><a class="text-amber-700 underline" href="polityka-cookies.html">Polityka plików cookies</a>
+            <p class="font-sans font-bold text-bk-slate text-sm">Fundacja BK Capital</p>
+            <p>ul. Celna 13/17, 30-507 Kraków &bull; KRS: 0000861638 &bull; NIP: 6793206112 &bull; REGON: 387222545</p><a class="text-blue-800 underline" href="polityka-cookies.html">Polityka plików cookies</a>
         </div>
     </footer>
 
